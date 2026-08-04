@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modtest:block/darkness_slab"
+    },
+    "type=double": {
+      "model": "modtest:block/darkness_block"
+    },
+    "type=top": {
+      "model": "modtest:block/darkness_slab_top"
+    }
+  }
+}

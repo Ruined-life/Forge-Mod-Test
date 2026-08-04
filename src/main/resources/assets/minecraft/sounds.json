@@ -1,0 +1,148 @@
+{
+  "music.end": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/end/another_him",
+        "stream": true
+      }
+    ]
+  },
+  "music.dragon": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/end/dragon",
+        "stream": true
+      }
+    ]
+  },
+  "entity.villager.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.celebrate": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.death": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.hurt": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.no": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.trade": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.villager.yes": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/idle1"
+    ]
+  },
+  "entity.skeleton.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/skeleton/skeleton_idle1",
+      "mob/skeleton/skeleton_idle2"
+    ]
+  },
+  "entity.creeper.primed": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "mob/creeper/explode",
+        "pitch": 2
+      }
+    ]
+  },
+  "entity.pig.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/pig/100_years",
+      "mob/pig/skywars",
+      "mob/pig/bruh"
+    ]
+  },
+  "entity.pig.death": {
+    "replace": true,
+    "sounds": [
+      "mob/pig/techno_never_dies"
+    ]
+  },
+  "entity.enderman.teleport": {
+    "replace": true,
+    "sounds": [
+      "mob/enderman/enderman_teleport"
+    ]
+  },
+  "entity.horse.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/horse/peter"
+    ]
+  },
+  "entity.cow.death": {
+    "replace": true,
+    "sounds": [
+      "mob/cow/ringtone"
+    ]
+  },
+  "entity.chicken.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/chicken/chicken"
+    ]
+  },
+  "entity.chicken.death": {
+    "replace": true,
+    "sounds": [
+      "mob/chicken/death1",
+      "mob/chicken/death2",
+      "mob/chicken/death3"
+    ]
+  },
+  "entity.spider.death": {
+    "replace": true,
+    "sounds": [
+      "mob/spider/laugh"
+    ]
+  },
+  "entity.spider.hurt": {
+    "replace": true,
+    "sounds": [
+      "mob/spider/laugh"
+    ]
+  },
+  "entity.spider.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/spider/laugh"
+    ]
+  },
+  "block.furnace.fire_crackle": {
+    "replace": true,
+    "sounds": [
+      "block/furnaces/furnace_hum"
+    ]
+  }
+}

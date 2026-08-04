@@ -1,0 +1,98 @@
+package net.RuinedLife.modtest.datagen;
+
+import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.modtest;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModItemModelProvider extends ItemModelProvider {
+    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, modtest.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerModels() {
+        simpleItem(ModItems.TEMPORARY_MUSIC_DISC);
+        simpleItem(ModItems.BLACK_KNIFE_MUSIC_DISC);
+        simpleItem(ModItems.ERIKA_MUSIC_DISC);
+
+        simpleItem(ModItems.crystal_a);
+        simpleItem(ModItems.crystal_b);
+        simpleItem(ModItems.crystal_c);
+        simpleItem(ModItems.crystal_d);
+        simpleItem(ModItems.crystal_e);
+        simpleItem(ModItems.pure_crystal);
+        simpleItem(ModItems.kiwi_fruit);
+        simpleItem(ModItems.FRIEND);
+        simpleItem(ModItems.FEATHER);
+        simpleItem(ModItems.SUN);
+
+        fenceItem(ModBlocks.DARKNESS_FENCE, ModBlocks.DARKNESS_BLOCK);
+        buttonItem(ModBlocks.DARKNESS_BUTTON, ModBlocks.DARKNESS_BLOCK);
+        wallItem(ModBlocks.DARKNESS_WALL, ModBlocks.DARKNESS_BLOCK);
+        trapdoorItem(ModBlocks.DARKNESS_TRAP_DOOR);
+
+        handheldItem(ModItems.PINK_SWORD);
+        handheldItem(ModItems.PINK_PICKAXE);
+        handheldItem(ModItems.PINK_AXE);
+        handheldItem(ModItems.PINK_SHOVEL);
+        handheldItem(ModItems.PINK_HOE);
+
+
+    }
+
+    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+        assert item.getId() != null;
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(modtest.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(modtest.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                mcLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    // Option A: Render 2D in hand using your darkness_trap_door.png block texture
+    public void trapdoorItem(RegistryObject<Block> block) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), "item/generated")
+                .texture("layer0", new ResourceLocation(modtest.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", new ResourceLocation(modtest.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", new ResourceLocation(modtest.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall", new ResourceLocation(modtest.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(modtest.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(modtest.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+
+}

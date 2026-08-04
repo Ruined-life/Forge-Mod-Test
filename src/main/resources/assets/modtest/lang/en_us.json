@@ -1,0 +1,63 @@
+{
+  "item.modtest.temporary": "Temporary Music Disc",
+  "item.modtest.temporary.desc": "shiftyz - Temporary",
+
+  "item.modtest.black_knife": "BLACK KNIFE",
+  "item.modtest.black_knife.desc": "Toby Fox - BLACK KNIFE",
+
+  "item.modtest.erika": "Erika",
+  "item.modtest.erika.desc": "Adolf Hitler (Idk) - Erika",
+
+  "item.modtest.crystal_a": "SHADOW CRYSTAL (A)",
+  "item.modtest.crystal_b": "SHADOW CRYSTAL (B)",
+  "item.modtest.crystal_c": "SHADOW CRYSTAL (C)",
+  "item.modtest.crystal_d": "SHADOW CRYSTAL (D)",
+  "item.modtest.crystal_e": "SHADOW CRYSTAL (E)",
+  "item.modtest.pure_crystal": "PURE CRYSTAL",
+
+
+  "item.modtest.kiwi_fruit": "Kiwi Fruit",
+
+
+  "block.modtest.new_zealand_block": "New Zealand Block",
+  "block.modtest.pink_block": "Pink Block",
+  "block.modtest.nazi_block": "Nazi Block",
+  "block.modtest.darkness_block": "DARKNESS",
+  "block.modtest.dust_block": "Dust Block",
+
+  "block.modtest.darkness_stairs": "DARKNESS STAIRS",
+  "block.modtest.darkness_slab": "DARKNESS SLAB",
+  "block.modtest.darkness_button": "DARKNESS BUTTON",
+  "block.modtest.darkness_pressure_plate": "DARKNESS PRESSURE PLATE",
+  "block.modtest.darkness_fence": "DARKNESS FENCE",
+  "block.modtest.darkness_fence_gate": "DARKNESS FENCE GATE",
+  "block.modtest.darkness_wall": "DARKNESS WALL",
+  "block.modtest.darkness_door": "DARKNESS DOOR",
+  "block.modtest.darkness_trap_door": "DARKNESS TRAP DOOR",
+
+
+  "item.modtest.friend_item": "IMAGE_FRIEND",
+  "tooltip.modtest.friend_item.tooltip": "HELPFUL FRIEND",
+
+
+  "item.modtest.sun_item": "SUN",
+  "item.modtest.feather_item": "FEATHER",
+
+
+  "sounds.modtest.sound_friend_activated": "LAUGHTER",
+
+
+  "item.modtest.pink_sword": "Pink's Sword",
+  "item.modtest.pink_pickaxe": "Pink's Pickaxe",
+  "item.modtest.pink_axe": "Pink's Axe",
+  "item.modtest.pink_shovel": "Pink's Shovel",
+  "item.modtest.pink_hoe": "Pink's Hoe",
+
+  "item.modtest.pink_helmet": "Pink's Ears",
+  "item.modtest.pink_chestplate": "Pink's Shirt",
+  "item.modtest.pink_leggings": "Pink's Skirt",
+  "item.modtest.pink_boots": "Pink's Shoes",
+
+
+  "creativetab.tutorial_tab": "Roaring"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "modtest:crystal_a"
+    },
+    "B": {
+      "item": "modtest:crystal_b"
+    },
+    "C": {
+      "item": "modtest:crystal_c"
+    },
+    "D": {
+      "item": "modtest:crystal_d"
+    },
+    "E": {
+      "item": "modtest:crystal_e"
+    }
+  },
+  "pattern": [
+    " A ",
+    "BED",
+    " C "
+  ],
+  "result": {
+    "item": "modtest:pure_crystal"
+  },
+  "show_notification": true
+}
