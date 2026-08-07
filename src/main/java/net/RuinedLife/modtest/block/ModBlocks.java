@@ -1,11 +1,9 @@
 package net.RuinedLife.modtest.block;
 
 import net.RuinedLife.modtest.item.ModItems;
-import net.RuinedLife.modtest.block.custom.DustBlock;
+import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.sound.ModSounds;
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;

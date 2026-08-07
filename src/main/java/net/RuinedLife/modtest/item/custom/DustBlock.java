@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.block.custom;
+package net.RuinedLife.modtest.item.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

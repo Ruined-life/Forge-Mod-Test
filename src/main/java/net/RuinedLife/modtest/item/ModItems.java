@@ -1,9 +1,9 @@
 package net.RuinedLife.modtest.item;
 
-import net.RuinedLife.modtest.block.custom.FRIENDITEM;
-import net.RuinedLife.modtest.block.custom.FeatherItem;
-import net.RuinedLife.modtest.block.custom.FuelItem;
-import net.RuinedLife.modtest.block.custom.TeleportWand;
+import net.RuinedLife.modtest.item.custom.FRIENDITEM;
+import net.RuinedLife.modtest.item.custom.FeatherItem;
+import net.RuinedLife.modtest.item.custom.FuelItem;
+import net.RuinedLife.modtest.item.custom.TeleportWand;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.world.item.*;

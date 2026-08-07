@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.block.custom;
+package net.RuinedLife.modtest.item.custom;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
