@@ -47,6 +47,12 @@ public class ModCreativeModTabs {
 
                         //FLOWERS
                         pOutput.accept(ModBlocks.AQUA.get());
+                        pOutput.accept(ModBlocks.PURPLE.get());
+                        pOutput.accept(ModBlocks.GREEN.get());
+                        pOutput.accept(ModBlocks.GOLD.get());
+                        pOutput.accept(ModBlocks.YELLOW.get());
+                        pOutput.accept(ModBlocks.ORANGE.get());
+                        pOutput.accept(ModBlocks.BLUE.get());
 
                         //FOOD ITEMS
                         pOutput.accept(ModItems.kiwi_fruit.get());

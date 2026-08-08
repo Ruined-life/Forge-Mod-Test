@@ -51,10 +51,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeKiwiCrop((CropBlock) ModBlocks.KIWI_CROP.get(), "kiwi_stage", "kiwi_stage_");
 
 
+        //AQUA
         simpleBlockWithItem(ModBlocks.AQUA.get(), models().cross(blockTexture(ModBlocks.AQUA.get()).getPath(),
                 blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_AQUA.get(), models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"), "plant",
+        simpleBlockWithItem(ModBlocks.POTTED_AQUA.get(), models().singleTexture("potted_aqua", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
+
+        //GREEN
+        simpleBlockWithItem(ModBlocks.GREEN.get(), models().cross(blockTexture(ModBlocks.GREEN.get()).getPath(),
+                blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_GREEN.get(), models().singleTexture("potted_green", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
+
+        //PURPLE
+        simpleBlockWithItem(ModBlocks.PURPLE.get(), models().cross(blockTexture(ModBlocks.PURPLE.get()).getPath(),
+                blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PURPLE.get(), models().singleTexture("potted_purple", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
+
+        //GOLD
+        simpleBlockWithItem(ModBlocks.GOLD.get(), models().cross(blockTexture(ModBlocks.GOLD.get()).getPath(),
+                blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_GOLD.get(), models().singleTexture("potted_gold", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
+
+        //YELLOW
+        simpleBlockWithItem(ModBlocks.YELLOW.get(), models().cross(blockTexture(ModBlocks.YELLOW.get()).getPath(),
+                blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_YELLOW.get(), models().singleTexture("potted_yellow", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
+
+        //ORANGE
+        simpleBlockWithItem(ModBlocks.ORANGE.get(), models().cross(blockTexture(ModBlocks.ORANGE.get()).getPath(),
+                blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_ORANGE.get(), models().singleTexture("potted_orange", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
+
+        //BLUE
+        simpleBlockWithItem(ModBlocks.BLUE.get(), models().cross(blockTexture(ModBlocks.BLUE.get()).getPath(),
+                blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BLUE.get(), models().singleTexture("potted_blue", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
+
+
 
     }
 

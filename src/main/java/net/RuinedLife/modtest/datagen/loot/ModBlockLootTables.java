@@ -54,6 +54,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.AQUA.get());
         this.add(ModBlocks.POTTED_AQUA.get(), createPotFlowerItemTable(ModBlocks.AQUA.get()));
 
+        this.dropSelf(ModBlocks.PURPLE.get());
+        this.add(ModBlocks.POTTED_PURPLE.get(), createPotFlowerItemTable(ModBlocks.PURPLE.get()));
+
+        this.dropSelf(ModBlocks.GREEN.get());
+        this.add(ModBlocks.POTTED_GREEN.get(), createPotFlowerItemTable(ModBlocks.GREEN.get()));
+
+        this.dropSelf(ModBlocks.GOLD.get());
+        this.add(ModBlocks.POTTED_GOLD.get(), createPotFlowerItemTable(ModBlocks.GOLD.get()));
+
+        this.dropSelf(ModBlocks.YELLOW.get());
+        this.add(ModBlocks.POTTED_YELLOW.get(), createPotFlowerItemTable(ModBlocks.YELLOW.get()));
+
+        this.dropSelf(ModBlocks.ORANGE.get());
+        this.add(ModBlocks.POTTED_ORANGE.get(), createPotFlowerItemTable(ModBlocks.ORANGE.get()));
+
+        this.dropSelf(ModBlocks.BLUE.get());
+        this.add(ModBlocks.POTTED_BLUE.get(), createPotFlowerItemTable(ModBlocks.BLUE.get()));
+
         this.add(ModBlocks.DARKNESS_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DARKNESS_SLAB.get()));
         this.add(ModBlocks.DARKNESS_DOOR.get(),

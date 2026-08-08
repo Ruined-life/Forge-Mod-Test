@@ -1,6 +1,7 @@
-// 1.20.1	2026-08-08T15:40:08.136065227	Item Models: modtest
+// 1.20.1	2026-08-08T20:47:21.900113148	Item Models: modtest
 e2d6d1d864891d9e5eb34f6eb4bc654b16e86a94 assets/modtest/models/item/aqua.json
 d7cf57f34d9663f74f40d44293ebcc2d85a54fe3 assets/modtest/models/item/black_knife.json
+1c634fabea969ab7f743f70fae81f3b5201b94f9 assets/modtest/models/item/blue.json
 6052660c55bf34ff0de21e9b8fce6116d3a13104 assets/modtest/models/item/crystal_a.json
 38331a31a459487e26cb3bc8e2a122193daa5068 assets/modtest/models/item/crystal_b.json
 95c58637211d8a2aa11c7f7021483c0f577b7e9c assets/modtest/models/item/crystal_c.json
@@ -13,12 +14,17 @@ ff8b7853a013f7c579bf92268fd7165e4e820571 assets/modtest/models/item/darkness_wal
 d15dc83ffd551b9bfd6be09c42717b51c89adc72 assets/modtest/models/item/erika.json
 e0318dd15a3df11f05bf3eef7f6f375288c80302 assets/modtest/models/item/feather_item.json
 9078405e20af73b0977f53c23e908cc3a45431fb assets/modtest/models/item/friend_item.json
+1afe6b1d9b58f4dea0808168395a6a3e3436adde assets/modtest/models/item/gold.json
+d54c48f33db43b95d79803d01a39ef8f3fd7dca2 assets/modtest/models/item/green.json
 bd620a1924b2f36404e80eea55587dfcfb89c45e assets/modtest/models/item/kiwi_fruit.json
 89505801c6161d43fc0e644665dd62db70cfc2c7 assets/modtest/models/item/kiwi_seeds.json
+d720615202649cffebc925179b19edc76563b316 assets/modtest/models/item/orange.json
 96be17f7986d31325e7f449f2d84785a76f17cc9 assets/modtest/models/item/pink_axe.json
 92966659dc9377418c2d2bcc78ae5a6375a77a3a assets/modtest/models/item/pink_hoe.json
 a729577ae1e1d0516bfe228da6f1d38c4d91ebee assets/modtest/models/item/pink_pickaxe.json
 99f01fe842534a0ed74130ed003442f506251f04 assets/modtest/models/item/pink_shovel.json
 f42548272e4c87583e704cdd3e076eafcdc71457 assets/modtest/models/item/pure_crystal.json
+5214871281629bf25359b295a2c4cf2bb78af935 assets/modtest/models/item/purple.json
 1ec01bbd6435ba9ab9eaff8ca539320920bf281c assets/modtest/models/item/sun_item.json
 f7110ea86b10ce4bfdb79474b94e51d60826a11e assets/modtest/models/item/temporary.json
+2bedd0dc99d39953d141feaff58cfd92204398af assets/modtest/models/item/yellow.json

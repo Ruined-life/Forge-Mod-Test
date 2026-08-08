@@ -48,6 +48,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.PINK_HOE);
 
         simpleBlockItemBlockTexture(ModBlocks.AQUA);
+        simpleBlockItemBlockTexture(ModBlocks.PURPLE);
+        simpleBlockItemBlockTexture(ModBlocks.GREEN);
+        simpleBlockItemBlockTexture(ModBlocks.GOLD);
+        simpleBlockItemBlockTexture(ModBlocks.YELLOW);
+        simpleBlockItemBlockTexture(ModBlocks.ORANGE);
+        simpleBlockItemBlockTexture(ModBlocks.BLUE);
 
     }
 
