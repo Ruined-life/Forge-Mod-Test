@@ -4,6 +4,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.modtest;
+import net.RuinedLife.modtest.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -55,6 +56,20 @@ public class ModEvents {
 
 
         }
+
+        if(event.getType() == ModVillagers.SOUND_MASTER.get()){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 2),
+                    new ItemStack(ModItems.PINK_SWORD.get()),
+                    2,8, 0.02f));
+
+
+
+
+        }
+
     }
 
     @SubscribeEvent

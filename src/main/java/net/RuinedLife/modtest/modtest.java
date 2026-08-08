@@ -6,6 +6,7 @@ import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.loot.ModLootModifiers;
 import net.RuinedLife.modtest.sound.ModSounds;
+import net.RuinedLife.modtest.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -34,7 +35,9 @@ public class modtest {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
         ModLootModifiers.register((modEventBus));
+        ModVillagers.register(modEventBus);
 
         ModSounds.register(modEventBus);
 
