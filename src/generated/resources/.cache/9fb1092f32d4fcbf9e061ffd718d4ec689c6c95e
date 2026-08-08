@@ -1,5 +1,7 @@
-// 1.20.1	2026-07-31T17:49:49.290452284	Recipes
+// 1.20.1	2026-08-08T13:14:07.965897016	Recipes
 09d9109dd770be310af99e79a306ca6008a14e0d data/modtest/advancements/recipes/misc/friend_item.json
+93f69e83e7e0417a6e4a407eeab2132dba5e4664 data/modtest/advancements/recipes/misc/new_zealand_block.json
 ff29f04257076ce00dbf2e29e0124f086e74b92c data/modtest/advancements/recipes/misc/pure_crystal.json
 164bf10d4787999cefb8cf9699746db89a29685e data/modtest/recipes/friend_item.json
+da11e7030d69ebd4c7a30ca82237c8486e8c5119 data/modtest/recipes/new_zealand_block.json
 5607c96d9dfed9e50779985b78a254b7434d2f67 data/modtest/recipes/pure_crystal.json

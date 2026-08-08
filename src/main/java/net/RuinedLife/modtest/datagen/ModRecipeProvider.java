@@ -1,9 +1,11 @@
 package net.RuinedLife.modtest.datagen;
 
+import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -26,6 +28,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //oreSmelting(pWriter, SMELTABLE_ITEMS, RecipeCategory.MISC, ModItems.KIWI_FRUIT.get(), 0.25f, 100, "food");
 
 
+        //PURE CRYSTAL
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.pure_crystal.get())
                 .pattern(" A ")
                 .pattern("BED")
@@ -38,6 +41,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.crystal_a.get()), has(ModItems.crystal_a.get()))
                 .save(pWriter);
 
+
+        //PURE C
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEW_ZEALAND_BLOCK.get())
+                .pattern("AAA")
+                .pattern("BCB")
+                .pattern("AAA")
+                .define('A', Items.BLUE_WOOL)
+                .define('B', Items.WHITE_DYE)
+                .define('C', Items.RED_DYE)
+                .unlockedBy(getHasName(Items.BLUE_WOOL), has(Items.BLUE_WOOL))
+                .save(pWriter);
+
+        //IDK
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FRIEND.get(), 1)
                 .requires(ModItems.FRIEND.get())
                 .unlockedBy(getHasName(ModItems.FRIEND.get()), has(ModItems.FRIEND.get()))

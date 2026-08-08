@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.RuinedLife.modtest.item.ModCreativeModTabs;
 import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.loot.ModLootModifiers;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,6 +32,8 @@ public class modtest {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register((modEventBus));
+
         ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
