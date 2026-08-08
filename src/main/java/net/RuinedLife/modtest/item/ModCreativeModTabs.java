@@ -42,6 +42,12 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.PINK_LEGGINGS.get());
                         pOutput.accept(ModItems.PINK_BOOTS.get());
 
+                        //CROPS
+                        pOutput.accept(ModItems.kiwi_seeds.get());
+
+                        //FLOWERS
+                        pOutput.accept(ModBlocks.AQUA.get());
+
                         //FOOD ITEMS
                         pOutput.accept(ModItems.kiwi_fruit.get());
 

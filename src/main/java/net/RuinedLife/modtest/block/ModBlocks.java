@@ -1,10 +1,12 @@
 package net.RuinedLife.modtest.block;
 
+import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
 import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
@@ -83,12 +85,26 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE).noOcclusion(), BlockSetType.ACACIA));
 
 
+
+    //CROPS
+    public static final RegistryObject<Block> KIWI_CROP = BLOCKS.register("kiwi_crop",
+            () -> new KiwiFruitCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+
+
+    //FLOWERS
+    public static final RegistryObject<Block> AQUA = registerBlock("aqua",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_AQUA = BLOCKS.register("potted_aqua",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.AQUA,
+                        BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
 
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){

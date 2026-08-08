@@ -1,5 +1,6 @@
 package net.RuinedLife.modtest.item;
 
+import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.item.custom.FRIENDITEM;
 import net.RuinedLife.modtest.item.custom.FeatherItem;
 import net.RuinedLife.modtest.item.custom.FuelItem;
@@ -42,6 +43,13 @@ public class ModItems {
 
    //public static final RegistryObject<Item> DARKNESS_DOOR = ITEMS.register("darkness_door",
             //() -> new Item(new Item.Properties()));
+
+
+    //CROPS
+    public static final RegistryObject<Item> kiwi_seeds = ITEMS.register("kiwi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KIWI_CROP.get(), new Item.Properties()));
+
+
 
     //FOODS
     public static final RegistryObject<Item> kiwi_fruit = ITEMS.register("kiwi_fruit",

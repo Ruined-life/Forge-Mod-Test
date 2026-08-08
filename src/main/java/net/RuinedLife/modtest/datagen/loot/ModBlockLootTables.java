@@ -1,6 +1,9 @@
 package net.RuinedLife.modtest.datagen.loot;
 
 import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
+import net.RuinedLife.modtest.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
@@ -11,6 +14,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -45,11 +50,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DARKNESS_FENCE_GATE.get());
         this.dropSelf(ModBlocks.DARKNESS_WALL.get());
 
+        //FLOWERS
+        this.dropSelf(ModBlocks.AQUA.get());
+        this.add(ModBlocks.POTTED_AQUA.get(), createPotFlowerItemTable(ModBlocks.AQUA.get()));
+
         this.add(ModBlocks.DARKNESS_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DARKNESS_SLAB.get()));
         this.add(ModBlocks.DARKNESS_DOOR.get(),
                 block -> createDoorTable(ModBlocks.DARKNESS_DOOR.get()));
 
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.KIWI_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(KiwiFruitCropBlock.AGE, 3));
+        this.add(ModBlocks.KIWI_CROP.get(), createCropDrops(ModBlocks.KIWI_CROP.get(), ModItems.kiwi_fruit.get(),
+                ModItems.kiwi_seeds.get(), lootitemcondition$builder));
 
         //THIS PART IS FOR ORES
         //this.add(ModBlocks.SAPHHIRE_ORE.get(),

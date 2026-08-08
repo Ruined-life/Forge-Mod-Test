@@ -7,6 +7,8 @@ import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.loot.ModLootModifiers;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -43,6 +45,9 @@ public class modtest {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.AQUA.getId(), ModBlocks.POTTED_AQUA);
+        });
 
     }
 

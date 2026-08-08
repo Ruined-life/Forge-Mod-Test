@@ -1,4 +1,5 @@
-// 1.20.1	2026-08-01T18:06:57.431473569	Loot Tables
+// 1.20.1	2026-08-08T14:47:15.058754748	Loot Tables
+d1858e88cae5efaf16d24c58193b83708c282830 data/modtest/loot_tables/blocks/aqua.json
 a0826c134add3dd38b0144990bfa8b6c4b04c8bf data/modtest/loot_tables/blocks/darkness_block.json
 3f518efc5a0a227e765246029b029d250acd559e data/modtest/loot_tables/blocks/darkness_button.json
 49d7ef9f687122922575481013bd310a24d16995 data/modtest/loot_tables/blocks/darkness_door.json
@@ -10,6 +11,8 @@ ae7529624b8d668a95ac8ed5dda5804f2a225792 data/modtest/loot_tables/blocks/darknes
 28b9fc9367afe080729f288b98b3a6de8889cb24 data/modtest/loot_tables/blocks/darkness_trap_door.json
 d5d6dee980d7d08c8fb320fa5a4c5e8d3139ee6b data/modtest/loot_tables/blocks/darkness_wall.json
 00171898e8b67c6b3adb3db596e4c646ea76eacd data/modtest/loot_tables/blocks/dust_block.json
+7da5e4deed48a34654dda71eaef6f5bb0f4733bf data/modtest/loot_tables/blocks/kiwi_crop.json
 e8cc0bc9867e923270bf0110193e1202a144ea2c data/modtest/loot_tables/blocks/nazi_block.json
 61037994df662ff933a72cda27d027a6887c5b67 data/modtest/loot_tables/blocks/new_zealand_block.json
 9b601130f9748ab31be4150d25fa9efa2f0ff216 data/modtest/loot_tables/blocks/pink_block.json
+06f8b2c7c425e9a13f36657b0ff37df9f3d1b0c8 data/modtest/loot_tables/blocks/potted_aqua.json

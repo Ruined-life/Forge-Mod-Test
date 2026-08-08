@@ -1,12 +1,18 @@
 package net.RuinedLife.modtest.datagen;
 
 import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -41,7 +47,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
         trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.DARKNESS_TRAP_DOOR.get()), modLoc("block/darkness_trap_door"), true, "cutout");
 
+
+        makeKiwiCrop((CropBlock) ModBlocks.KIWI_CROP.get(), "kiwi_stage", "kiwi_stage_");
+
+
+        simpleBlockWithItem(ModBlocks.AQUA.get(), models().cross(blockTexture(ModBlocks.AQUA.get()).getPath(),
+                blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_AQUA.get(), models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
+
     }
+
+    public void makeKiwiCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> kiwiStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+
+    private ConfiguredModel[] kiwiStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KiwiFruitCropBlock) block).getAgeProperty()),
+                new ResourceLocation(modtest.MOD_ID, "block/" + textureName + state.getValue(((KiwiFruitCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

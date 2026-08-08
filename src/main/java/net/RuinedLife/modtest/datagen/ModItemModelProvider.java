@@ -31,6 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.crystal_e);
         simpleItem(ModItems.pure_crystal);
         simpleItem(ModItems.kiwi_fruit);
+        simpleItem(ModItems.kiwi_seeds);
         simpleItem(ModItems.FRIEND);
         simpleItem(ModItems.FEATHER);
         simpleItem(ModItems.SUN);
@@ -40,12 +41,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.DARKNESS_WALL, ModBlocks.DARKNESS_BLOCK);
         trapdoorItem(ModBlocks.DARKNESS_TRAP_DOOR);
 
-        handheldItem(ModItems.PINK_SWORD);
+        //handheldItem(ModItems.PINK_SWORD);
         handheldItem(ModItems.PINK_PICKAXE);
         handheldItem(ModItems.PINK_AXE);
         handheldItem(ModItems.PINK_SHOVEL);
         handheldItem(ModItems.PINK_HOE);
 
+        simpleBlockItemBlockTexture(ModBlocks.AQUA);
 
     }
 
@@ -93,6 +95,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(modtest.MOD_ID, "item/" + item.getId().getPath()));
     }
+
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(modtest.MOD_ID, "block/" + item.getId().getPath()));
+    }
+
 
 
 }
