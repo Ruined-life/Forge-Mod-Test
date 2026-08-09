@@ -1,13 +1,12 @@
 package net.RuinedLife.modtest.item;
 
 import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.item.custom.FRIENDITEM;
-import net.RuinedLife.modtest.item.custom.FeatherItem;
-import net.RuinedLife.modtest.item.custom.FuelItem;
-import net.RuinedLife.modtest.item.custom.TeleportWand;
+import net.RuinedLife.modtest.entity.ModEntities;
+import net.RuinedLife.modtest.item.custom.*;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +25,9 @@ public class ModItems {
     public static final RegistryObject<Item> ERIKA_MUSIC_DISC = ITEMS.register("erika",
             () -> new RecordItem(6, ModSounds.ERIKA, new Item.Properties().stacksTo(1), 3560));
 
+
+    public static final RegistryObject<Item> AOE_PICKAXE = ITEMS.register("aoe_pickaxe",
+            () -> new AOEPickaxeItem(Tiers.WOOD, 2, 1, new Item.Properties()));
 
     //REGULAR ITEMS
     public static final RegistryObject<Item> crystal_a = ITEMS.register("crystal_a",
@@ -89,6 +91,12 @@ public class ModItems {
     //FUEL ITEMS
     public static final RegistryObject<Item> SUN = ITEMS.register("sun_item",
             () -> new FuelItem(new Item.Properties(), 99999999));
+
+
+    //SPAWN EGGS
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

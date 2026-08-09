@@ -1,12 +1,15 @@
 package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
+import net.RuinedLife.modtest.entity.ModEntities;
+import net.RuinedLife.modtest.entity.client.RhinoRenderer;
 import net.RuinedLife.modtest.item.ModCreativeModTabs;
 import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.loot.ModLootModifiers;
 import net.RuinedLife.modtest.sound.ModSounds;
 import net.RuinedLife.modtest.villager.ModVillagers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -40,6 +43,7 @@ public class modtest {
         ModVillagers.register(modEventBus);
 
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -85,6 +89,8 @@ public class modtest {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
         }
     }

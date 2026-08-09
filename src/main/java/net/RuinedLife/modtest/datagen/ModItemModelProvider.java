@@ -24,6 +24,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BLACK_KNIFE_MUSIC_DISC);
         simpleItem(ModItems.ERIKA_MUSIC_DISC);
 
+        //CUSTOM TOOLS
+        simpleItem(ModItems.AOE_PICKAXE);
+
         simpleItem(ModItems.crystal_a);
         simpleItem(ModItems.crystal_b);
         simpleItem(ModItems.crystal_c);
@@ -54,6 +57,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.YELLOW);
         simpleBlockItemBlockTexture(ModBlocks.ORANGE);
         simpleBlockItemBlockTexture(ModBlocks.BLUE);
+
+
+        withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
     }
 

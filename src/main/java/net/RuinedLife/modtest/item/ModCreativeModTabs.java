@@ -29,6 +29,8 @@ public class ModCreativeModTabs {
 
 
                         //TOOLS
+                        pOutput.accept(ModItems.AOE_PICKAXE.get());
+
                         pOutput.accept(ModItems.PINK_SWORD.get());
                         pOutput.accept(ModItems.PINK_PICKAXE.get());
                         pOutput.accept(ModItems.PINK_AXE.get());
@@ -95,6 +97,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.TEMPORARY_MUSIC_DISC.get());
                         pOutput.accept(ModItems.BLACK_KNIFE_MUSIC_DISC.get());
                         pOutput.accept(ModItems.ERIKA_MUSIC_DISC.get());
+
+
+                        //SPAWN EGGS
+                        pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
 
                     })
                     .build());
