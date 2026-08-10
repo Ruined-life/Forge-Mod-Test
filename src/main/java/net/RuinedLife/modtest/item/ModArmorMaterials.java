@@ -14,6 +14,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     PINK("pink", 26, new int[] { 30,30, 30, 30 }, 25,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 5f, 5f, () -> Ingredient.of(ModItems.FRIEND.get()));
 
+
+
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;

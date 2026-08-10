@@ -55,9 +55,39 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.YELLOW.get());
                         pOutput.accept(ModBlocks.ORANGE.get());
                         pOutput.accept(ModBlocks.BLUE.get());
+                        pOutput.accept(ModBlocks.PINK.get());
 
                         //FOOD ITEMS
                         pOutput.accept(ModItems.kiwi_fruit.get());
+
+                        pOutput.accept(ModItems.PIE_NORMAL.get());
+                        pOutput.accept(ModItems.PIE_GOLD.get());
+                        pOutput.accept(ModItems.PIE_AQUA.get());
+                        pOutput.accept(ModItems.PIE_PURPLE.get());
+                        pOutput.accept(ModItems.PIE_GREEN.get());
+                        pOutput.accept(ModItems.PIE_YELLOW.get());
+                        pOutput.accept(ModItems.PIE_ORANGE.get());
+                        pOutput.accept(ModItems.PIE_BLUE.get());
+                        pOutput.accept(ModItems.PIE_PINK.get());
+
+                        //FLOWER ITEMS
+                        pOutput.accept(ModItems.TOY_KNIFE.get());
+                        pOutput.accept(ModItems.RIBBON.get());
+
+                        pOutput.accept(ModItems.BURNT_PAN.get());
+                        pOutput.accept(ModItems.APRON.get());
+
+                        pOutput.accept(ModItems.TORN_NOTEBOOK.get());
+                        pOutput.accept(ModItems.CLOUDY_GLASSES.get());
+
+                        pOutput.accept(ModItems.TOY_GUN.get());
+                        pOutput.accept(ModItems.COWBOY_HAT.get());
+
+                        pOutput.accept(ModItems.BALLET_SHOES.get());
+                        pOutput.accept(ModItems.TUTU.get());
+
+                        pOutput.accept(ModItems.TOUGH_GLOVE.get());
+                        pOutput.accept(ModItems.BANDANA.get());
 
 
                         //BLOCKS

@@ -60,6 +60,7 @@ public class modtest {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.YELLOW.getId(), ModBlocks.POTTED_YELLOW);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ORANGE.getId(), ModBlocks.POTTED_ORANGE);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLUE.getId(), ModBlocks.POTTED_BLUE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK.getId(), ModBlocks.POTTED_PINK);
         });
 
     }

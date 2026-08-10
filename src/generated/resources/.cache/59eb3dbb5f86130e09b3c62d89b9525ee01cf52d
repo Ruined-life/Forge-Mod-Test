@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-08T20:47:21.899903912	Loot Tables
+// 1.20.1	2026-08-10T22:45:11.594287047	Loot Tables
 d1858e88cae5efaf16d24c58193b83708c282830 data/modtest/loot_tables/blocks/aqua.json
 3c9560205429f366603e5332d1f6c549bcc60c33 data/modtest/loot_tables/blocks/blue.json
 a0826c134add3dd38b0144990bfa8b6c4b04c8bf data/modtest/loot_tables/blocks/darkness_block.json
@@ -18,12 +18,14 @@ a65b6a804d67ed3cda6c52d7ce62ee185047a753 data/modtest/loot_tables/blocks/green.j
 e8cc0bc9867e923270bf0110193e1202a144ea2c data/modtest/loot_tables/blocks/nazi_block.json
 61037994df662ff933a72cda27d027a6887c5b67 data/modtest/loot_tables/blocks/new_zealand_block.json
 f7bf387f99469134fce6a5f0659b0742831da100 data/modtest/loot_tables/blocks/orange.json
+7b4a735c522d2ee3251ecf60189b192fc0907316 data/modtest/loot_tables/blocks/pink.json
 9b601130f9748ab31be4150d25fa9efa2f0ff216 data/modtest/loot_tables/blocks/pink_block.json
 06f8b2c7c425e9a13f36657b0ff37df9f3d1b0c8 data/modtest/loot_tables/blocks/potted_aqua.json
 43e531eff9a03d7fa74e6e8e18c165198c5a8846 data/modtest/loot_tables/blocks/potted_blue.json
 0d3748b9e144250f681be7f01f77d89ce5b61b22 data/modtest/loot_tables/blocks/potted_gold.json
 bd93183eafa7d6600f65700cd4b744bfcb602470 data/modtest/loot_tables/blocks/potted_green.json
 84874ba070926692721258ca045bab03cf4c9eb5 data/modtest/loot_tables/blocks/potted_orange.json
+09472ec1e59c887e4b443e3605834638e0e3e6ec data/modtest/loot_tables/blocks/potted_pink.json
 d1e240e59476882507dcf43851192eddfe8f452c data/modtest/loot_tables/blocks/potted_purple.json
 fed8dac9d74f9304c324e75ee6ccabab3ebb45f0 data/modtest/loot_tables/blocks/potted_yellow.json
 fa7ba86b2ae657c18f6ab72394246840d0df33f2 data/modtest/loot_tables/blocks/purple.json

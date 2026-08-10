@@ -59,6 +59,154 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.FRIEND.get()), has(ModItems.FRIEND.get()))
                 .save(pWriter);
 
+
+        //ALL PIE RECIPES
+        //NORMAL PIE
+
+        //AQUA PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_AQUA.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.AQUA.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.TOY_KNIFE.get(),
+                        ModItems.RIBBON.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //PURPLE PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_PURPLE.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.PURPLE.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.TORN_NOTEBOOK.get(),
+                        ModItems.CLOUDY_GLASSES.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //GREEN PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_GREEN.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.GREEN.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.BURNT_PAN.get(),
+                        ModItems.APRON.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //YELLOW PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_YELLOW.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.YELLOW.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.TOY_GUN.get(),
+                        ModItems.COWBOY_HAT.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //ORANGE PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_ORANGE.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.ORANGE.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.TOUGH_GLOVE.get(),
+                        ModItems.BANDANA.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //BLUE PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_BLUE.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.BLUE.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.BALLET_SHOES.get(),
+                        ModItems.TUTU.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+
+        //PINK PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_PINK.get())
+                .pattern("BBB")
+                .pattern("DAD")
+                .pattern("CCC")
+                .define('A', ModBlocks.PINK.get())
+                .define('B', Items.EGG)
+                .define('C', Items.WHEAT)
+                .define('D', Ingredient.of(
+                        ModItems.PINK_SWORD.get(),
+                        ModItems.PINK_BOOTS.get(),
+                        ModItems.PINK_LEGGINGS.get(),
+                        ModItems.PINK_CHESTPLATE.get(),
+                        ModItems.PINK_HELMET.get(),
+                        ModItems.PINK_PICKAXE.get(),
+                        ModItems.PINK_AXE.get(),
+                        ModItems.PINK_SHOVEL.get(),
+                        ModItems.PINK_HOE.get()
+
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
+        //GOLD PIE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_GOLD.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('A', ModItems.PIE_NORMAL.get())
+                .define('B', Ingredient.of(
+                        ModBlocks.AQUA.get(),
+                        ModBlocks.PURPLE.get(),
+                        ModBlocks.GREEN.get(),
+                        ModBlocks.GOLD.get(),
+                        ModBlocks.YELLOW.get(),
+                        ModBlocks.BLUE.get(),
+                        ModBlocks.ORANGE.get(),
+                        ModBlocks.PINK.get()
+                ))
+                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .save(pWriter);
+
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

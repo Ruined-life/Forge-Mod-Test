@@ -93,6 +93,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_BLUE.get(), models().singleTexture("potted_blue", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
 
+        //PINK
+        simpleBlockWithItem(ModBlocks.PINK.get(), models().cross(blockTexture(ModBlocks.PINK.get()).getPath(),
+                blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PINK.get(), models().singleTexture("potted_pink", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
+
 
 
     }

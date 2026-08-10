@@ -39,6 +39,37 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FEATHER);
         simpleItem(ModItems.SUN);
 
+        //FOOD
+        simpleItem(ModItems.PIE_NORMAL);
+        simpleItem(ModItems.PIE_AQUA);
+        simpleItem(ModItems.PIE_PURPLE);
+        simpleItem(ModItems.PIE_GOLD);
+        simpleItem(ModItems.PIE_GREEN);
+        simpleItem(ModItems.PIE_YELLOW);
+        simpleItem(ModItems.PIE_ORANGE);
+        simpleItem(ModItems.PIE_BLUE);
+        simpleItem(ModItems.PIE_PINK);
+
+        //FLOWER ITEMS
+        simpleItem(ModItems.TOY_KNIFE);
+        simpleItem(ModItems.RIBBON);
+
+        simpleItem(ModItems.TOY_GUN);
+        simpleItem(ModItems.COWBOY_HAT);
+
+        simpleItem(ModItems.BURNT_PAN);
+        simpleItem(ModItems.APRON);
+
+        simpleItem(ModItems.TORN_NOTEBOOK);
+        simpleItem(ModItems.CLOUDY_GLASSES);
+
+        simpleItem(ModItems.BALLET_SHOES);
+        simpleItem(ModItems.TUTU);
+
+        simpleItem(ModItems.TOUGH_GLOVE);
+        simpleItem(ModItems.BANDANA);
+
+
         fenceItem(ModBlocks.DARKNESS_FENCE, ModBlocks.DARKNESS_BLOCK);
         buttonItem(ModBlocks.DARKNESS_BUTTON, ModBlocks.DARKNESS_BLOCK);
         wallItem(ModBlocks.DARKNESS_WALL, ModBlocks.DARKNESS_BLOCK);
@@ -57,6 +88,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.YELLOW);
         simpleBlockItemBlockTexture(ModBlocks.ORANGE);
         simpleBlockItemBlockTexture(ModBlocks.BLUE);
+        simpleBlockItemBlockTexture(ModBlocks.PINK);
 
 
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

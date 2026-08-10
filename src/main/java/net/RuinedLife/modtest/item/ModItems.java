@@ -5,12 +5,18 @@ import net.RuinedLife.modtest.entity.ModEntities;
 import net.RuinedLife.modtest.item.custom.*;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.sound.ModSounds;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ModItems {
 
@@ -43,7 +49,41 @@ public class ModItems {
     public static final RegistryObject<Item> pure_crystal = ITEMS.register("pure_crystal",
             () -> new Item(new Item.Properties()));
 
-   //public static final RegistryObject<Item> DARKNESS_DOOR = ITEMS.register("darkness_door",
+    //FLOWER ITEMS
+    public static final RegistryObject<Item> TOY_KNIFE = ITEMS.register("toy_knife",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.toy_knife", ChatFormatting.AQUA));
+    public static final RegistryObject<Item> RIBBON = ITEMS.register("ribbon",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.ribbon", ChatFormatting.RED));
+
+    public static final RegistryObject<Item> TORN_NOTEBOOK = ITEMS.register("torn_notebook",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.torn_notebook", ChatFormatting.LIGHT_PURPLE));
+    public static final RegistryObject<Item> CLOUDY_GLASSES = ITEMS.register("cloudy_glasses",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.cloudy_glasses", ChatFormatting.WHITE));
+
+    public static final RegistryObject<Item> BURNT_PAN = ITEMS.register("burnt_pan",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.burnt_pan", ChatFormatting.GRAY));
+    public static final RegistryObject<Item> APRON = ITEMS.register("apron",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.apron", ChatFormatting.GREEN));
+
+    public static final RegistryObject<Item> BALLET_SHOES = ITEMS.register("ballet_shoes",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.ballet_shoes", ChatFormatting.DARK_BLUE));
+    public static final RegistryObject<Item> TUTU = ITEMS.register("tutu",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.tutu", ChatFormatting.WHITE));
+
+    public static final RegistryObject<Item> TOY_GUN = ITEMS.register("toy_gun",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.toy_gun", ChatFormatting.YELLOW));
+    public static final RegistryObject<Item> COWBOY_HAT = ITEMS.register("cowboy_hat",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.cowboy_hat", ChatFormatting.GRAY));
+
+    public static final RegistryObject<Item> TOUGH_GLOVE = ITEMS.register("tough_glove",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.tough_glove", ChatFormatting.GRAY));
+    public static final RegistryObject<Item> BANDANA = ITEMS.register("bandana",
+            () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.bandana", ChatFormatting.DARK_GRAY));
+
+
+
+
+    //public static final RegistryObject<Item> DARKNESS_DOOR = ITEMS.register("darkness_door",
             //() -> new Item(new Item.Properties()));
 
 
@@ -57,6 +97,26 @@ public class ModItems {
     public static final RegistryObject<Item> kiwi_fruit = ITEMS.register("kiwi_fruit",
             () -> new Item(new Item.Properties().food(ModFoods.KIWI)));
 
+    //PIES
+    public static final RegistryObject<Item> PIE_NORMAL = ITEMS.register("pie_normal",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_NORMAL)));
+    public static final RegistryObject<Item> PIE_AQUA = ITEMS.register("pie_aqua",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_AQUA)));
+    public static final RegistryObject<Item> PIE_PURPLE = ITEMS.register("pie_purple",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_PURPLE)));
+    public static final RegistryObject<Item> PIE_GREEN = ITEMS.register("pie_green",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_GREEN)));
+    public static final RegistryObject<Item> PIE_GOLD = ITEMS.register("pie_gold",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_GOLD)));
+    public static final RegistryObject<Item> PIE_YELLOW = ITEMS.register("pie_yellow",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_YELLOW)));
+    public static final RegistryObject<Item> PIE_BLUE = ITEMS.register("pie_blue",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_BLUE)));
+    public static final RegistryObject<Item> PIE_ORANGE = ITEMS.register("pie_orange",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_ORANGE)));
+    public static final RegistryObject<Item> PIE_PINK = ITEMS.register("pie_pink",
+            () -> new Item(new Item.Properties().food(ModFoods.PIE_PINK)));
+
     //ADVANCED ITEMS
     public static final RegistryObject<Item> FRIEND = ITEMS.register("friend_item",
             () -> new FRIENDITEM(new Item.Properties()));
@@ -66,7 +126,7 @@ public class ModItems {
             () -> new TeleportWand(new Item.Properties()));
 
 
-    //TOOLS
+    //TOOLS/WEAPONS
     public static final RegistryObject<Item> PINK_SWORD = ITEMS.register("pink_sword",
             () -> new SwordItem(ModToolTiers.PINK, 5, 2, new Item.Properties()));
     public static final RegistryObject<Item> PINK_PICKAXE = ITEMS.register("pink_pickaxe",
@@ -77,6 +137,8 @@ public class ModItems {
             () -> new ShovelItem(ModToolTiers.PINK, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> PINK_HOE = ITEMS.register("pink_hoe",
             () -> new ShovelItem(ModToolTiers.PINK, 1, 100, new Item.Properties()));
+
+
 
     //ARMOR
     public static final RegistryObject<Item> PINK_HELMET = ITEMS.register("pink_helmet",
