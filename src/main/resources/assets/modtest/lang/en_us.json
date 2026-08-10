@@ -19,8 +19,6 @@
   "item.modtest.kiwi_fruit": "Kiwi Fruit",
   "item.modtest.kiwi_seeds": "Kiwi Fruit Seeds",
 
-  "block.modtest.aqua": "AQUA",
-
 
   "block.modtest.new_zealand_block": "New Zealand Block",
   "block.modtest.pink_block": "Pink Block",
@@ -63,6 +61,61 @@
 
 
   "entity.minecraft.villager.modtest.soundmaster": "Pink Master",
+
+
+  "block.modtest.aqua": "Aqua",
+  "block.modtest.purple": "Seth",
+  "block.modtest.green": "Green",
+  "block.modtest.gold": "Flowery",
+  "block.modtest.yellow": "Yellow",
+  "block.modtest.blue": "Blue",
+  "block.modtest.orange": "Orange",
+
+  "item.modtest.pie_normal": "Butterscotch Pie",
+  "item.modtest.pie_gold": "Golden Pie",
+  "item.modtest.pie_aqua": "Aqua Pie",
+  "item.modtest.pie_purple": "Purple Pie",
+  "item.modtest.pie_green": "Green Pie",
+  "item.modtest.pie_yellow": "Yellow Pie",
+  "item.modtest.pie_blue": "Blue Pie",
+  "item.modtest.pie_orange": "Orange Pie",
+
+  "item.modtest.toy_knife" : "Toy Knife",
+  "item.modtest.ribbon" : "Faded Ribbon",
+
+  "item.modtest.torn_notebook" : "Torn Notebook",
+  "item.modtest.cloudy_glasses" : "Cloudy Glasses",
+
+  "item.modtest.burnt_pan" : "Burnt Pan",
+  "item.modtest.apron" : "Apron",
+
+  "item.modtest.ballet_shoes" : "Ballet Shoes",
+  "item.modtest.tutu" : "Tutu",
+
+  "item.modtest.toy_gun" : "Empty Gun",
+  "item.modtest.cowboy_hat" : "Cowboy Hat",
+
+  "item.modtest.tough_glove" : "Tough Glove",
+  "item.modtest.bandana" : "Manly Bandana",
+
+  "tooltip.modtest.toy_knife": "Uuuu, knife to knife!",
+  "tooltip.modtest.ribbon": "A worn ribbon.",
+
+  "tooltip.modtest.torn_notebook": "Hey don't touch that! My battle strategies are in there!",
+  "tooltip.modtest.cloudy_glasses": "A pair of fogged up glasses.",
+
+  "tooltip.modtest.burnt_pan": "(Please dont burn it.)",
+  "tooltip.modtest.apron": "Very fashionable.",
+
+  "tooltip.modtest.ballet_shoes": "Tragedy is just as common as beauty.",
+  "tooltip.modtest.tutu": "Such kawaii!",
+
+  "tooltip.modtest.toy_gun": "Ah it's my criminell catching device!",
+  "tooltip.modtest.cowboy_hat": "Very cow there, boy.",
+
+  "tooltip.modtest.tough_glove": "Come and get some! I'll punch them all!",
+  "tooltip.modtest.bandana": "Very manly",
+
 
 
   "creativetab.tutorial_tab": "Roaring"
