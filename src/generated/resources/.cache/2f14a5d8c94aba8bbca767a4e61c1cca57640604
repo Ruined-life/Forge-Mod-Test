@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-11T01:59:05.659989362	Item Models: modtest
+// 1.20.1	2026-08-11T06:31:43.230000162	Item Models: modtest
 d0d7fb7e223a4a770a2738d106d430b76006c541 assets/modtest/models/item/aoe_pickaxe.json
 7e15827f887bdc947e9bc69789e726759639a09a assets/modtest/models/item/apron.json
 e2d6d1d864891d9e5eb34f6eb4bc654b16e86a94 assets/modtest/models/item/aqua.json
@@ -7,6 +7,7 @@ a25f27d88e98e965da1ceb50f1a3a6887c6e2b84 assets/modtest/models/item/ballet_shoes
 d7cf57f34d9663f74f40d44293ebcc2d85a54fe3 assets/modtest/models/item/black_knife.json
 1c634fabea969ab7f743f70fae81f3b5201b94f9 assets/modtest/models/item/blue.json
 f4d543fff1de690edfc01d1dad4759d653d243f0 assets/modtest/models/item/burnt_pan.json
+b3ea75c4d9fc44616bc3394822975fe52d14942f assets/modtest/models/item/chest_scanner.json
 75843d8234d04ecafa959939c272a96b9c1703b8 assets/modtest/models/item/cloudy_glasses.json
 91e082de937a88ceefe9f58c0c8c43a200b313da assets/modtest/models/item/cowboy_hat.json
 6052660c55bf34ff0de21e9b8fce6116d3a13104 assets/modtest/models/item/crystal_a.json

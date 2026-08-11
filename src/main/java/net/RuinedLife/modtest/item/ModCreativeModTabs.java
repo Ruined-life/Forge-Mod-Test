@@ -30,6 +30,7 @@ public class ModCreativeModTabs {
 
                         //TOOLS
                         pOutput.accept(ModItems.AOE_PICKAXE.get());
+                        pOutput.accept(ModItems.CHEST_SCANNER.get());
 
                         pOutput.accept(ModItems.PINK_SWORD.get());
                         pOutput.accept(ModItems.PINK_PICKAXE.get());

@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //CUSTOM TOOLS
         simpleItem(ModItems.AOE_PICKAXE);
+        simpleItem(ModItems.CHEST_SCANNER);
 
         simpleItem(ModItems.crystal_a);
         simpleItem(ModItems.crystal_b);

@@ -1,9 +1,23 @@
-// 1.20.1	2026-08-11T00:12:27.774997868	Recipes
+// 1.20.1	2026-08-11T06:31:43.229402788	Recipes
 09d9109dd770be310af99e79a306ca6008a14e0d data/modtest/advancements/recipes/misc/friend_item.json
 93f69e83e7e0417a6e4a407eeab2132dba5e4664 data/modtest/advancements/recipes/misc/new_zealand_block.json
+d004f4ea407f72cb68288aab9dca6b5bdc88191f data/modtest/advancements/recipes/misc/pie_aqua.json
+e3931344a7e2996cad00c188efcac7728ff635be data/modtest/advancements/recipes/misc/pie_blue.json
 7ea3707ce42f99b32b829420eb56e8db59896a8c data/modtest/advancements/recipes/misc/pie_gold.json
+70aef717ab6dfedae0873c8ee4cf8f2e4019ceaf data/modtest/advancements/recipes/misc/pie_green.json
+df0de41475b0a7d779f95fac751b36157edc5fdc data/modtest/advancements/recipes/misc/pie_orange.json
+fca250d1415d6841b815964a0027002a8dfc6573 data/modtest/advancements/recipes/misc/pie_pink.json
+20a40e30cf8c0b1921fc9636ac3a3c9d08f1b7f0 data/modtest/advancements/recipes/misc/pie_purple.json
+41a1bf658c51c508211fc9d6506003cc859564ca data/modtest/advancements/recipes/misc/pie_yellow.json
 ff29f04257076ce00dbf2e29e0124f086e74b92c data/modtest/advancements/recipes/misc/pure_crystal.json
 164bf10d4787999cefb8cf9699746db89a29685e data/modtest/recipes/friend_item.json
 da11e7030d69ebd4c7a30ca82237c8486e8c5119 data/modtest/recipes/new_zealand_block.json
+04f263356bc3fa02039a4a3ada33aa54c2175071 data/modtest/recipes/pie_aqua.json
+7655a569a1774acfd7686a50262bf4a4bd3c9bf1 data/modtest/recipes/pie_blue.json
 ce9774abee8c22880a5fc36a8b3c4323c98c404d data/modtest/recipes/pie_gold.json
+3920a80808ac323f7c6689eccf53e92fda38676d data/modtest/recipes/pie_green.json
+553f4f726ed45e6542dc553fd833f8ac19e52c45 data/modtest/recipes/pie_orange.json
+7d314e5e362b27abf3409b68eeac5bbbafd2f487 data/modtest/recipes/pie_pink.json
+7769cc6ba6e30b7e3797c3f590846194630255a0 data/modtest/recipes/pie_purple.json
+71a808a09fccd4abfb085dc9349f25a23b98a6f1 data/modtest/recipes/pie_yellow.json
 5607c96d9dfed9e50779985b78a254b7434d2f67 data/modtest/recipes/pure_crystal.json

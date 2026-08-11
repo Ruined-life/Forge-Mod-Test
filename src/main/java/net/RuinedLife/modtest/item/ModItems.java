@@ -32,8 +32,12 @@ public class ModItems {
             () -> new RecordItem(6, ModSounds.ERIKA, new Item.Properties().stacksTo(1), 3560));
 
 
+    //EXPERIMENTAL ITEMS
     public static final RegistryObject<Item> AOE_PICKAXE = ITEMS.register("aoe_pickaxe",
             () -> new AOEPickaxeItem(Tiers.WOOD, 2, 1, new Item.Properties()));
+    public static final RegistryObject<Item> CHEST_SCANNER = ITEMS.register("chest_scanner",
+            () -> new ChestScanner(new Item.Properties()));
+
 
     //REGULAR ITEMS
     public static final RegistryObject<Item> crystal_a = ITEMS.register("crystal_a",
