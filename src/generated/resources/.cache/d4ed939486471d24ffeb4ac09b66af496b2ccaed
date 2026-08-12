@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-10T22:45:11.593130136	Block States: modtest
+// 1.20.1	2026-08-12T16:54:27.958132823	Block States: modtest
 779d5cc8bcf54c711185c945b1c1ac7e38526374 assets/modtest/blockstates/aqua.json
 1cc8c8def11bfe0fd3badb79712fdeee41ef993b assets/modtest/blockstates/blue.json
 96acdd379ca5e4abb47e2114cd87dd457114b92d assets/modtest/blockstates/darkness_block.json
@@ -29,6 +29,9 @@ ab2f3c93ba895bbb9e3d3cf6d2e50d75c83a6d07 assets/modtest/blockstates/potted_pink.
 d2acf1901c315152f4d29f40643cd75a0ddaed37 assets/modtest/blockstates/potted_purple.json
 92b804c8e5704a7370fdf32c61ec5e4f47a5ed81 assets/modtest/blockstates/potted_yellow.json
 927e1d52796521d673086e27f4c7457f7ccaac16 assets/modtest/blockstates/purple.json
+8c1186c85a3898db77648bbd3fc81ffca02b55f2 assets/modtest/blockstates/scarlet_leaves.json
+85fa21edb550d392b5b7c594a863a84eee9f9910 assets/modtest/blockstates/scarlet_log.json
+190eac60f06ca8311dd330033161c84a077e1264 assets/modtest/blockstates/scarlet_planks.json
 9c418c4525163b2936b570bbd01ffcdee997b9a3 assets/modtest/blockstates/yellow.json
 2fa40ae60aaac19e8f78abf6c274ad4822b39f10 assets/modtest/models/block/aqua.json
 0521d47b6b14dd54a9a1add60f403831c0f1a5cc assets/modtest/models/block/blue.json
@@ -83,6 +86,9 @@ d8edd1f249d53d0b4fc4e1bf5c45c1ed6b64e906 assets/modtest/models/block/potted_gree
 5ba5ecabeec5077e023f17759363266111059590 assets/modtest/models/block/potted_purple.json
 e2208fb9d9ba79d759a3985e02d0f5c7e09c2444 assets/modtest/models/block/potted_yellow.json
 244c727cddefb44e0f680c54ce7cf9332dc93778 assets/modtest/models/block/purple.json
+5eed742b3efa621c7fe1e6a3c20bda6a9408621c assets/modtest/models/block/scarlet_leaves.json
+cf336d9d96419d6f3c950fbaef86796ba796750d assets/modtest/models/block/scarlet_log.json
+06c833c35df647e52477992026aa442a7f3d50c6 assets/modtest/models/block/scarlet_planks.json
 704cd680c269495226621a1d9091009057de0221 assets/modtest/models/block/yellow.json
 e5755e495ed348918c07d9896f0d924a3367dcf0 assets/modtest/models/item/aqua.json
 45d0f8d2b99e947f2a316998c32812316b9317bd assets/modtest/models/item/blue.json
@@ -104,4 +110,7 @@ a1324914ffec05de50447f7f48b5f33843ebab8a assets/modtest/models/item/potted_orang
 7f2ab75a7a76ec384696341d93d9dfb47f9a75a2 assets/modtest/models/item/potted_purple.json
 f7644e66648e75b343fe7ff21c457d9d4dd5cd80 assets/modtest/models/item/potted_yellow.json
 87ba39d0ba59c7e53585c2e39e389b22992bc711 assets/modtest/models/item/purple.json
+2936763304cfa377f55c0d12c4c715d757829207 assets/modtest/models/item/scarlet_leaves.json
+3287b6d8a50c8ce142af7541c87b8ba7a65e803b assets/modtest/models/item/scarlet_log.json
+b1e31a067f917bf677c03b77b6827fb0f087b79e assets/modtest/models/item/scarlet_planks.json
 9f6177f8755a9e275375de3666860012c4a3fc7b assets/modtest/models/item/yellow.json

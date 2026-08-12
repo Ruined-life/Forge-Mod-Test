@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.registries.ModBlocks;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

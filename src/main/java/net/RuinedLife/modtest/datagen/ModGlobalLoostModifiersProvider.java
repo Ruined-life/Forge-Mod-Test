@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.RuinedLife.modtest.loot.AddItemModifier;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;

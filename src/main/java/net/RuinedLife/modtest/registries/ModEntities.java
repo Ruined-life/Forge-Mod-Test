@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.entity;
+package net.RuinedLife.modtest.registries;
 
 import net.RuinedLife.modtest.entity.custom.RhinoEntity;
 import net.RuinedLife.modtest.modtest;

@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.entity.custom;
 
-import net.RuinedLife.modtest.entity.ModEntities;
+import net.RuinedLife.modtest.registries.ModEntities;
 import net.RuinedLife.modtest.entity.ai.RhinoAttackGoal;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -13,7 +13,6 @@ import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;

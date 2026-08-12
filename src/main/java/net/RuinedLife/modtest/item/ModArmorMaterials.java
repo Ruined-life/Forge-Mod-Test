@@ -1,6 +1,7 @@
 package net.RuinedLife.modtest.item;
 
 import net.RuinedLife.modtest.modtest;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;

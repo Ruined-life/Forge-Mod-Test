@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.item.custom;
 
-import net.RuinedLife.modtest.sound.ModSounds;
+import net.RuinedLife.modtest.registries.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;

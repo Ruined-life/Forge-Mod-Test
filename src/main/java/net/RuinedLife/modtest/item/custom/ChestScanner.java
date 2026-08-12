@@ -1,97 +1,95 @@
 package net.RuinedLife.modtest.item.custom;
 
-import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.entity.ModEntities;
-import net.RuinedLife.modtest.entity.custom.RhinoEntity;
+import net.RuinedLife.modtest.registries.ModBlocks;
+import net.RuinedLife.modtest.registries.ModEntities;
+import net.RuinedLife.modtest.helpers.BlockScanner;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec3;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
-// TODO:
-//  1. Get the players position when right clicked
-//  2. Loop through each block in a 16 block radius and print it out
-//  3. Check if the current block is a chest.
-//  4. If it IS a chest then loop through the contents of the chest and print each item
-//  5. If a key item is in the chest then print a special message otherwise continue as normal.
+import java.util.List;
 
 public class ChestScanner extends Item {
+
     public ChestScanner(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        if(!pLevel.isClientSide()){
+        // Only run logic on the server side
+        if (!pLevel.isClientSide()) {
             BlockPos playerPos = pPlayer.blockPosition();
             int radius = 5; // Scan 5 blocks around player
 
-// Loop through nearby coordinates
-            for (BlockPos checkPos : BlockPos.betweenClosed(
-                    playerPos.offset(-radius, -radius, -radius),
-                    playerPos.offset(radius, radius, radius))) {
+            // 1. Use BlockScanner helper to collect all chest positions in range
+            List<BlockPos> chestPositions = BlockScanner.scanArea(
+                    pLevel,
+                    playerPos,
+                    radius,
+                    state -> state.getBlock() instanceof ChestBlock
+            );
 
-                BlockState state = pLevel.getBlockState(checkPos);
+            // 2. Loop through only the positions where chests were actually found
+            for (BlockPos chestPos : chestPositions) {
+                Container container = ChestBlock.getContainer(
+                        (ChestBlock) pLevel.getBlockState(chestPos).getBlock(),
+                        pLevel.getBlockState(chestPos),
+                        pLevel,
+                        chestPos,
+                        true
+                );
 
-                // Check if the current block in the loop is a chest
-                if (state.getBlock() instanceof ChestBlock chestBlock) {
+                if (container != null) {
+                    pPlayer.displayClientMessage(
+                            Component.literal("Found Chest at: " + chestPos.toShortString()),
+                            false
+                    );
 
-                    // HERE: checkPos IS your chestPos!
-                    BlockPos chestPos = checkPos;
+                    // 3. Inspect the contents of the container
+                    for (int i = 0; i < container.getContainerSize(); i++) {
+                        ItemStack stack = container.getItem(i);
 
-                    // Pass chestPos into the helper method
-                    Container container = ChestBlock.getContainer(chestBlock, state, pLevel, chestPos, true);
-
-                    if (container != null) {
-                        for(int i = 0; i < container.getContainerSize(); i++){
-                            ItemStack stack = container.getItem(i);
-
-                            if(stack.is(Items.AIR)){
-                                continue;
-                            }
-
-                            if (!stack.isEmpty() && stack.is(ModBlocks.GREEN.get().asItem())) {
-                                // This item is a placeable block!
-                                pPlayer.displayClientMessage(Component.literal("FOUND GREEN FLOWER! SPAWNING GREEN"), false);
-
-                                if (pLevel instanceof ServerLevel serverLevel) {
-
-                                    ModEntities.RHINO.get().spawn(
-                                            serverLevel,
-                                            playerPos,
-                                            MobSpawnType.EVENT
-                                    );
-
-                                }
-                            }
-
-
-                            pPlayer.displayClientMessage(Component.literal("Chest contents: " + container.getItem(i)), false);
+                        if (stack.is(Items.AIR) || stack.isEmpty()) {
+                            continue;
                         }
+
+                        // Check for your special key item
+                        if (stack.is(ModBlocks.GREEN.get().asItem())) {
+                            pPlayer.displayClientMessage(
+                                    Component.literal("FOUND GREEN FLOWER! SPAWNING GREEN"),
+                                    false
+                            );
+
+                            if (pLevel instanceof ServerLevel serverLevel) {
+                                ModEntities.RHINO.get().spawn(
+                                        serverLevel,
+                                        playerPos,
+                                        MobSpawnType.EVENT
+                                );
+                            }
+                        }
+
+                        // Print general item contents
+                        pPlayer.displayClientMessage(
+                                Component.literal("  - Slot " + i + ": " + stack.getHoverName().getString() + " x" + stack.getCount()),
+                                false
+                        );
                     }
                 }
             }
         }
-        return InteractionResultHolder.consume(pPlayer.getMainHandItem());
+
+        return InteractionResultHolder.sidedSuccess(pPlayer.getItemInHand(pUsedHand), pLevel.isClientSide());
     }
 }

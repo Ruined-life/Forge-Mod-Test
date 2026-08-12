@@ -1,7 +1,6 @@
-package net.RuinedLife.modtest.item;
+package net.RuinedLife.modtest.registries;
 
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.tags.ModTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;

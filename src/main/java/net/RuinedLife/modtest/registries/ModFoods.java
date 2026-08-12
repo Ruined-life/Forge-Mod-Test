@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.item;
+package net.RuinedLife.modtest.registries;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

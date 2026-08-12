@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.tags;
+package net.RuinedLife.modtest.registries;
 
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.resources.ResourceLocation;

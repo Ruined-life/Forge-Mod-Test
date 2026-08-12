@@ -1,8 +1,8 @@
 package net.RuinedLife.modtest.datagen.loot;
 
-import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.registries.ModBlocks;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
-import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
@@ -39,6 +39,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.NAZI_BLOCK.get());
         this.dropSelf(ModBlocks.NEW_ZEALAND_BLOCK.get());
         this.dropSelf(ModBlocks.DUST_BLOCK.get());
+
+        this.dropSelf(ModBlocks.SCARLET_LOG.get());
+        //this.dropSelf(ModBlocks.SCARLET_WOOD.get());
+        //this.dropSelf(ModBlocks.STRIPPED_SCARLET_LOG.get());
+        //this.dropSelf(ModBlocks.STRIPPED_SCARLET_WOOD.get());
+        this.dropSelf(ModBlocks.SCARLET_PLANKS.get());
+
+        this.add(ModBlocks.SCARLET_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.NEW_ZEALAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); //TODO: Change to sapling
 
 
         //STAIRS, FENCES, FENCE GATES, SLABS, DOORS, TRAP DOORS

@@ -1,7 +1,6 @@
-package net.RuinedLife.modtest.villager;
+package net.RuinedLife.modtest.registries;
 
 import com.google.common.collect.ImmutableSet;
-import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;

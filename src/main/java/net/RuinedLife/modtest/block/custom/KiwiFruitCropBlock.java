@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.block.custom;
 
-import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

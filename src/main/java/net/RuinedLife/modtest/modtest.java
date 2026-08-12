@@ -1,14 +1,14 @@
 package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
-import net.RuinedLife.modtest.entity.ModEntities;
+import net.RuinedLife.modtest.registries.ModEntities;
 import net.RuinedLife.modtest.entity.client.RhinoRenderer;
-import net.RuinedLife.modtest.item.ModCreativeModTabs;
-import net.RuinedLife.modtest.item.ModItems;
-import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.loot.ModLootModifiers;
-import net.RuinedLife.modtest.sound.ModSounds;
-import net.RuinedLife.modtest.villager.ModVillagers;
+import net.RuinedLife.modtest.registries.ModCreativeModTabs;
+import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.ModBlocks;
+import net.RuinedLife.modtest.registries.ModLootModifiers;
+import net.RuinedLife.modtest.registries.ModSounds;
+import net.RuinedLife.modtest.registries.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;

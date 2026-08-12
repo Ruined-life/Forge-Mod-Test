@@ -1,8 +1,8 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.registries.ModBlocks;
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.tags.ModTags;
+import net.RuinedLife.modtest.registries.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -66,5 +66,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.DARKNESS_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.DARKNESS_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SCARLET_LOG.get());
+                //.add(ModBlocks.SCARLET_WOOD.get());
+                //.add(ModBlocks.STRIPPED_SCARLET_LOG.get())
+                //.add(ModBlocks.STRIPPED_SCARLET_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.SCARLET_PLANKS.get());
+
     }
 }

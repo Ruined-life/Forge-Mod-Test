@@ -26,6 +26,14 @@
   "block.modtest.darkness_block": "DARKNESS",
   "block.modtest.dust_block": "Dust Block",
 
+  "block.modtest.scarlet_log": "Scarlet Log",
+  "block.modtest.scarlet_wood": "Scarlet Wood",
+  "block.modtest.stripped_scarlet_log": "Stripped Scarlet Log",
+  "block.modtest.stripped_scarlet_wood": "Stripped Scarlet Wood",
+
+  "block.modtest.scarlet_planks": "Scarlet Planks",
+  "block.modtest.scarlet_leaves": "Scarlet Leaves",
+
   "block.modtest.darkness_stairs": "DARKNESS STAIRS",
   "block.modtest.darkness_slab": "DARKNESS SLAB",
   "block.modtest.darkness_button": "DARKNESS BUTTON",

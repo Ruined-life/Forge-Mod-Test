@@ -1,17 +1,20 @@
-package net.RuinedLife.modtest.block;
+package net.RuinedLife.modtest.registries;
 
+import net.RuinedLife.modtest.block.custom.FlammableRotatedPillarBlock;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
-import net.RuinedLife.modtest.item.ModItems;
 import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.sound.ModSounds;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -157,6 +160,53 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_PINK = BLOCKS.register("potted_pink",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.PINK,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+
+    //WOOD
+    public static final RegistryObject<Block> SCARLET_LOG = registerBlock("scarlet_log",
+            () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LOG).strength(3f)));
+    //public static final RegistryObject<Block> SCARLET_WOOD = registerBlock("scarlet_wood",
+            //() -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+    //public static final RegistryObject<Block> STRIPPED_SCARLET_LOG = registerBlock("stripped_scarlet_log",
+            //() -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    //public static final RegistryObject<Block> STRIPPED_SCARLET_WOOD = registerBlock("stripped_scarlet_wood",
+            //() -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> SCARLET_PLANKS = registerBlock("scarlet_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+    public static final RegistryObject<Block> SCARLET_LEAVES = registerBlock("scarlet_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

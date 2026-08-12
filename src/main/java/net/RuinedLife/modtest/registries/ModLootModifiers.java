@@ -1,14 +1,13 @@
-package net.RuinedLife.modtest.loot;
+package net.RuinedLife.modtest.registries;
 
 import com.mojang.serialization.Codec;
+import net.RuinedLife.modtest.loot.AddItemModifier;
 import net.RuinedLife.modtest.modtest;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.rmi.registry.Registry;
 
 public class ModLootModifiers {
 

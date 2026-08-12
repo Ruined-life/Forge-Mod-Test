@@ -1,14 +1,13 @@
 package net.RuinedLife.modtest.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.item.ModItems;
+import net.RuinedLife.modtest.registries.ModBlocks;
+import net.RuinedLife.modtest.registries.ModItems;
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.villager.ModVillagers;
+import net.RuinedLife.modtest.registries.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;

@@ -1,6 +1,5 @@
-package net.RuinedLife.modtest.item;
+package net.RuinedLife.modtest.registries;
 
-import net.RuinedLife.modtest.block.ModBlocks;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -109,6 +108,16 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.DARKNESS_DOOR.get());
                         pOutput.accept(ModBlocks.DARKNESS_TRAP_DOOR.get());
+
+                        //WOOD
+                        pOutput.accept(ModBlocks.SCARLET_LOG.get());
+                        //pOutput.accept(ModBlocks.SCARLET_WOOD.get());
+                        //pOutput.accept(ModBlocks.STRIPPED_SCARLET_LOG.get());
+                        //pOutput.accept(ModBlocks.STRIPPED_SCARLET_WOOD.get());
+
+
+                        pOutput.accept(ModBlocks.SCARLET_PLANKS.get());
+                        pOutput.accept(ModBlocks.SCARLET_LEAVES.get());
 
                         //BEDS
                         pOutput.accept(Items.PINK_BED);

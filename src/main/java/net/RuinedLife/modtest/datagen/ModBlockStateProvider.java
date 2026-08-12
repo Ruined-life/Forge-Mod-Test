@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.block.ModBlocks;
+import net.RuinedLife.modtest.registries.ModBlocks;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
@@ -9,7 +9,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Function;
@@ -100,7 +102,105 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
 
 
+        // 1. Generate Blockstates & Block Models
+        multiLayerLogBlock(
+                (RotatedPillarBlock) ModBlocks.SCARLET_LOG.get(),
+                modLoc("block/scarlet_log_inner"),
+                modLoc("block/scarlet_log_inner_top"),
+                modLoc("block/scarlet_log_outer"),
+                modLoc("block/scarlet_log_outer_top")
+        );
+// 2. Generate ONLY Item Models (pointing to the block models)
+        blockWithItem(ModBlocks.SCARLET_PLANKS);
+        multiLayerLeavesBlock(
+                ModBlocks.SCARLET_LEAVES,
+                modLoc("block/scarlet_leaves_inner"),
+                modLoc("block/scarlet_leaves_outer")
+        );
 
+        //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_LOG.get()), blockTexture(ModBlocks.STRIPPED_SCARLET_LOG.get()),
+                //new ResourceLocation(modtest.MOD_ID, "block/new_zealand_block"));
+        //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_WOOD.get()),
+                //blockTexture(ModBlocks.STRIPPED_SCARLET_LOG.get()));
+
+        //blockItem(ModBlocks.SCARLET_LOG);
+        //blockItem(ModBlocks.SCARLET_WOOD);
+        //blockItem(ModBlocks.STRIPPED_SCARLET_LOG);
+        //blockItem(ModBlocks.STRIPPED_SCARLET_WOOD);
+
+
+
+    }
+
+    private void multiLayerLeavesBlock(RegistryObject<Block> block, ResourceLocation innerTexture, ResourceLocation outerTexture) {
+        String blockName = ForgeRegistries.BLOCKS.getKey(block.get()).getPath();
+
+        // Creates a custom model combining two texture layers
+        ModelFile model = models().withExistingParent(blockName, "block/block")
+                .texture("particle", outerTexture)
+                .texture("inner", innerTexture)
+                .texture("outer", outerTexture)
+                .element()
+                .from(0, 0, 0).to(16, 16, 16)
+                .allFaces((dir, builder) -> builder.texture("#inner").cullface(dir))
+                .end()
+                .element()
+                .from(0, 0, 0).to(16, 16, 16)
+                .allFaces((dir, builder) -> builder.texture("#outer").cullface(dir))
+                .end()
+                .renderType("cutout");
+
+        simpleBlockWithItem(block.get(), model);
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().cubeAll(
+                        ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        blockTexture(blockRegistryObject.get())
+                ).renderType("cutout")
+        );
+    }
+
+    private void multiLayerLogBlock(RotatedPillarBlock block,
+                                    ResourceLocation innerSide, ResourceLocation innerTop,
+                                    ResourceLocation outerSide, ResourceLocation outerTop) {
+        String blockName = ForgeRegistries.BLOCKS.getKey(block).getPath();
+
+        // 1. Build the multi-layered block model
+        ModelFile model = models().withExistingParent(blockName, "block/block")
+                .texture("particle", outerSide)
+                .texture("inner_side", innerSide)
+                .texture("inner_top", innerTop)
+                .texture("outer_side", outerSide)
+                .texture("outer_top", outerTop)
+                // Layer 1: Inner Log
+                .element()
+                .from(0, 0, 0).to(16, 16, 16)
+                .face(net.minecraft.core.Direction.DOWN).texture("#inner_top").cullface(net.minecraft.core.Direction.DOWN).end()
+                .face(net.minecraft.core.Direction.UP).texture("#inner_top").cullface(net.minecraft.core.Direction.UP).end()
+                .face(net.minecraft.core.Direction.NORTH).texture("#inner_side").cullface(net.minecraft.core.Direction.NORTH).end()
+                .face(net.minecraft.core.Direction.SOUTH).texture("#inner_side").cullface(net.minecraft.core.Direction.SOUTH).end()
+                .face(net.minecraft.core.Direction.WEST).texture("#inner_side").cullface(net.minecraft.core.Direction.WEST).end()
+                .face(net.minecraft.core.Direction.EAST).texture("#inner_side").cullface(net.minecraft.core.Direction.EAST).end()
+                .end()
+                // Layer 2: Outer Bark (rendered on top)
+                .element()
+                .from(0, 0, 0).to(16, 16, 16)
+                .face(net.minecraft.core.Direction.DOWN).texture("#outer_top").cullface(net.minecraft.core.Direction.DOWN).end()
+                .face(net.minecraft.core.Direction.UP).texture("#outer_top").cullface(net.minecraft.core.Direction.UP).end()
+                .face(net.minecraft.core.Direction.NORTH).texture("#outer_side").cullface(net.minecraft.core.Direction.NORTH).end()
+                .face(net.minecraft.core.Direction.SOUTH).texture("#outer_side").cullface(net.minecraft.core.Direction.SOUTH).end()
+                .face(net.minecraft.core.Direction.WEST).texture("#outer_side").cullface(net.minecraft.core.Direction.WEST).end()
+                .face(net.minecraft.core.Direction.EAST).texture("#outer_side").cullface(net.minecraft.core.Direction.EAST).end()
+                .end()
+                .renderType("cutout");
+
+        // 2. Register Axis Block States
+        axisBlock(block, model, model);
+
+        // 3. Make the Item Model inherit directly from the layered block model!
+        simpleBlockItem(block, model);
     }
 
     public void makeKiwiCrop(CropBlock block, String modelName, String textureName) {
@@ -116,6 +216,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(modtest.MOD_ID, "block/" + textureName + state.getValue(((KiwiFruitCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject){
+        simpleBlockWithItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(modtest.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+
     }
 
 

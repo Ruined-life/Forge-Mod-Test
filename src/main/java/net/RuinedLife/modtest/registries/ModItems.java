@@ -1,22 +1,15 @@
-package net.RuinedLife.modtest.item;
+package net.RuinedLife.modtest.registries;
 
-import net.RuinedLife.modtest.block.ModBlocks;
-import net.RuinedLife.modtest.entity.ModEntities;
+import net.RuinedLife.modtest.item.ModArmorMaterials;
 import net.RuinedLife.modtest.item.custom.*;
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.sound.ModSounds;
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class ModItems {
 
