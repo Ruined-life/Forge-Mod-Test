@@ -367,4 +367,9 @@ public class ModAnimationDefinitions {
                     new AnimationChannel(AnimationChannel.Targets.POSITION,
                             new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 2f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
+
+
+    //public static final AnimationDefinition AQUA_IDLE = AnimationDefinition.Builder.withLength(2f).looping()
+            //.addAnimation("aqua",
+
 }

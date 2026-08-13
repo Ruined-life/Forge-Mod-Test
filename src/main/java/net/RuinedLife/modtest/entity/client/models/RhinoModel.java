@@ -1,4 +1,4 @@
-package net.RuinedLife.modtest.entity.client;// Made with Blockbench 4.8.3
+package net.RuinedLife.modtest.entity.client.models;// Made with Blockbench 4.8.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -7,19 +7,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.RuinedLife.modtest.entity.animations.ModAnimationDefinitions;
 import net.RuinedLife.modtest.entity.custom.RhinoEntity;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.resources.ResourceLocation;
 
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
-
-import static com.ibm.icu.lang.UCharacter.GraphemeClusterBreak.T;
-import static net.minecraft.client.resources.model.ModelResourceLocation.vanilla;
 
 public class RhinoModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart rhino;

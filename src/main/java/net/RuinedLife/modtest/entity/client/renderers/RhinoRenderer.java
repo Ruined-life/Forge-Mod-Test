@@ -1,6 +1,8 @@
-package net.RuinedLife.modtest.entity.client;
+package net.RuinedLife.modtest.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.RuinedLife.modtest.entity.client.ModModelLayers;
+import net.RuinedLife.modtest.entity.client.models.RhinoModel;
 import net.RuinedLife.modtest.entity.custom.RhinoEntity;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.client.renderer.MultiBufferSource;

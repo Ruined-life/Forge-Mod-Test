@@ -9,4 +9,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation RHINO_LAYER = new ModelLayerLocation(
             new ResourceLocation(modtest.MOD_ID, "rhino_layer"), "main");
 
+    public static final ModelLayerLocation AQUA_LAYER = new ModelLayerLocation(
+            new ResourceLocation(modtest.MOD_ID, "aqua_layer"), "main");
+
 }

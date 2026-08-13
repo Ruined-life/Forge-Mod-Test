@@ -1,7 +1,8 @@
-// 1.20.1	2026-08-11T06:31:43.230000162	Item Models: modtest
+// 1.20.1	2026-08-13T19:57:09.367724005	Item Models: modtest
 d0d7fb7e223a4a770a2738d106d430b76006c541 assets/modtest/models/item/aoe_pickaxe.json
 7e15827f887bdc947e9bc69789e726759639a09a assets/modtest/models/item/apron.json
 e2d6d1d864891d9e5eb34f6eb4bc654b16e86a94 assets/modtest/models/item/aqua.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/modtest/models/item/aqua_spawn_egg.json
 a25f27d88e98e965da1ceb50f1a3a6887c6e2b84 assets/modtest/models/item/ballet_shoes.json
 116aaa1955a5a43dc02195fd08faa2e8925827fa assets/modtest/models/item/bandana.json
 d7cf57f34d9663f74f40d44293ebcc2d85a54fe3 assets/modtest/models/item/black_knife.json

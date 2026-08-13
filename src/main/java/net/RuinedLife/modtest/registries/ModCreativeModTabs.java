@@ -141,6 +141,7 @@ public class ModCreativeModTabs {
 
                         //SPAWN EGGS
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.AQUA_SPAWN_EGG.get());
 
                     })
                     .build());

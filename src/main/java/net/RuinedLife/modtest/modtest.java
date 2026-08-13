@@ -1,8 +1,9 @@
 package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
+import net.RuinedLife.modtest.entity.client.renderers.AquaRenderer;
 import net.RuinedLife.modtest.registries.ModEntities;
-import net.RuinedLife.modtest.entity.client.RhinoRenderer;
+import net.RuinedLife.modtest.entity.client.renderers.RhinoRenderer;
 import net.RuinedLife.modtest.registries.ModCreativeModTabs;
 import net.RuinedLife.modtest.registries.ModItems;
 import net.RuinedLife.modtest.registries.ModBlocks;
@@ -92,6 +93,7 @@ public class modtest {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.AQUA.get(), AquaRenderer::new);
 
         }
     }
