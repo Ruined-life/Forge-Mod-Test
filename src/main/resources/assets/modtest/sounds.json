@@ -58,6 +58,19 @@
         "stream": true
       }
     ]
+  },
+  "aqua_ambient": {
+    "sounds": [
+      "modtest:entities/mobs/aqua/aqua_ambient_1",
+      "modtest:entities/mobs/aqua/aqua_ambient_2",
+      "modtest:entities/mobs/aqua/aqua_ambient_3",
+      "modtest:entities/mobs/aqua/aqua_ambient_4"
+    ]
+  },
+  "aqua_death": {
+    "sounds": [
+      "modtest:entities/mobs/aqua/aqua_death"
+    ]
   }
 }
 

@@ -30,6 +30,12 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> ERIKA = registerSoundEvents("erika");
 
 
+    //MOB SOUNDS
+    public static final RegistryObject<SoundEvent> AQUA_AMBIENT = SOUND_EVENTS.register("aqua_ambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_ambient")));
+    public static final RegistryObject<SoundEvent> AQUA_DEATH = SOUND_EVENTS.register("aqua_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_death")));
+
+
+
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);

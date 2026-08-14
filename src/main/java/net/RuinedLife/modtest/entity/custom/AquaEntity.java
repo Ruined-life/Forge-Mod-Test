@@ -2,12 +2,17 @@ package net.RuinedLife.modtest.entity.custom;
 
 import net.RuinedLife.modtest.entity.ai.RhinoAttackGoal;
 import net.RuinedLife.modtest.registries.ModEntities;
+import net.RuinedLife.modtest.registries.ModSounds;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
@@ -23,12 +28,25 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class AquaEntity extends Animal {
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(AquaEntity.class, EntityDataSerializers.BOOLEAN);
 
+    enum AquaActions {
+        TALK,
+        PICKUP,
+        SPIN
+
+    }
+    Random random = new Random();
+    Timer timer = new Timer();
 
     public AquaEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -122,7 +140,7 @@ public class AquaEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 100D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.MOVEMENT_SPEED, 2.5D)
+                .add(Attributes.MOVEMENT_SPEED, 1.5D)
                 .add(Attributes.ARMOR_TOUGHNESS, 10f)
                 .add(Attributes.ATTACK_KNOCKBACK, 30f)
                 .add(Attributes.ATTACK_DAMAGE, 40f);
@@ -138,12 +156,43 @@ public class AquaEntity extends Animal {
 //        }
 //    }
 
-    @Override
-    protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.GHAST_AMBIENT;
+    private static AquaActions DecideChoice(){
+        Random rand = new Random();
+        int randomEnum = rand.nextInt(AquaActions.values().length);
+        System.out.println("AQUA CHOICE: " + randomEnum);
+        return AquaActions.values()[randomEnum];
     }
 
+    @Override
+    public InteractionResult interactAt(Player pPlayer, Vec3 pVec, InteractionHand pHand) {
+        if(level().isClientSide()){
+            AquaActions result = DecideChoice();
 
+            switch(result){
+                case TALK -> {
+                    pPlayer.displayClientMessage(Component.literal("Uuuu Hello hello!").withStyle(ChatFormatting.AQUA), true);
+                    break;
+                }
+                case PICKUP -> {
+                    pPlayer.displayClientMessage(Component.literal("Hehehe, let's go for a ride!").withStyle(ChatFormatting.AQUA), true);
+                    pPlayer.startRiding(this, true);
+                    pPlayer.stopRiding();
+                    break;
+                }
+
+                case SPIN -> {
+                    //this.getX() = pPlayer.getX();
+                }
+
+            }
+        }
+        return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    protected @Nullable SoundEvent getAmbientSound() {
+        return ModSounds.AQUA_AMBIENT.get();
+    }
 
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
@@ -153,6 +202,6 @@ public class AquaEntity extends Animal {
 
     @Override
     protected @Nullable SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
+        return ModSounds.AQUA_DEATH.get();
     }
 }

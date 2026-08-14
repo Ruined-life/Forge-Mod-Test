@@ -70,6 +70,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TOUGH_GLOVE);
         simpleItem(ModItems.BANDANA);
 
+        simpleItem(ModItems.AQUA_SPAWN_EGG);
+
 
         fenceItem(ModBlocks.DARKNESS_FENCE, ModBlocks.DARKNESS_BLOCK);
         buttonItem(ModBlocks.DARKNESS_BUTTON, ModBlocks.DARKNESS_BLOCK);
@@ -93,7 +95,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-        withExistingParent(ModItems.AQUA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
 
     }
 
