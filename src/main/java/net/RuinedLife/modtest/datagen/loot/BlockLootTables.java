@@ -36,7 +36,6 @@ public class BlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(BlockRegistry.DARKNESS_BLOCK.get());
         this.dropSelf(BlockRegistry.PINK_BLOCK.get());
-        this.dropSelf(BlockRegistry.NAZI_BLOCK.get());
         this.dropSelf(BlockRegistry.NEW_ZEALAND_BLOCK.get());
         this.dropSelf(BlockRegistry.DUST_BLOCK.get());
         this.dropSelf(BlockRegistry.GEM_POLISHING_STATION.get());

@@ -21,7 +21,6 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
     protected void registerModels() {
         simpleItem(ItemsRegistry.TEMPORARY_MUSIC_DISC);
         simpleItem(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC);
-        simpleItem(ItemsRegistry.ERIKA_MUSIC_DISC);
 
         //CUSTOM TOOLS
         simpleItem(ItemsRegistry.AOE_PICKAXE);

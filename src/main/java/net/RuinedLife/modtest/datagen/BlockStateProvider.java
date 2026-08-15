@@ -26,7 +26,6 @@ public class BlockStateProvider extends net.minecraftforge.client.model.generato
         //e.x blockWithItem(ModBlocks.BLOCK);
         blockWithItem(BlockRegistry.DARKNESS_BLOCK);
         blockWithItem(BlockRegistry.PINK_BLOCK);
-        blockWithItem(BlockRegistry.NAZI_BLOCK);
         blockWithItem(BlockRegistry.NEW_ZEALAND_BLOCK);
         blockWithItem(BlockRegistry.DUST_BLOCK);
 

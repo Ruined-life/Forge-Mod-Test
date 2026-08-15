@@ -19,7 +19,6 @@ public class ItemsRegistry {
     //MUSIC DISCS
     public static final RegistryObject<Item> TEMPORARY_MUSIC_DISC = ITEMS.register("temporary", () -> new RecordItem(6, SoundsRegistry.TEMPORARY, new Item.Properties().stacksTo(1), 3340));
     public static final RegistryObject<Item> BLACK_KNIFE_MUSIC_DISC = ITEMS.register("black_knife", () -> new RecordItem(6, SoundsRegistry.BLACK_KNIFE, new Item.Properties().stacksTo(1), 2420));
-    public static final RegistryObject<Item> ERIKA_MUSIC_DISC = ITEMS.register("erika", () -> new RecordItem(6, SoundsRegistry.ERIKA, new Item.Properties().stacksTo(1), 3560));
 
     //EXPERIMENTAL ITEMS
     public static final RegistryObject<Item> AOE_PICKAXE = ITEMS.register("aoe_pickaxe", () -> new AOEPickaxeItem(Tiers.WOOD, 2, 1, new Item.Properties()));

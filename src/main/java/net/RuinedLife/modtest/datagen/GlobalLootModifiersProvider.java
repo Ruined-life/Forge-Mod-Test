@@ -20,8 +20,8 @@ public class GlobalLootModifiersProvider extends GlobalLootModifierProvider {
     @Override
     protected void start() {
         add("kiwi_fruit_from_grass", new AddItemModifier(new LootItemCondition[] {LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(), LootItemRandomChanceCondition.randomChance(0.35f).build()}, ItemsRegistry.kiwi_fruit.get()));
-        add("erika_from_creeper", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()}, ItemsRegistry.ERIKA_MUSIC_DISC.get()));
-        add("erika_from_village_chests", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build()}, ItemsRegistry.ERIKA_MUSIC_DISC.get()));
+        add("temporary_from_creeper", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()}, ItemsRegistry.TEMPORARY_MUSIC_DISC.get()));
+        add("temporary_from_village_chests", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build()}, ItemsRegistry.TEMPORARY_MUSIC_DISC.get()));
 
     }
 }

@@ -92,7 +92,6 @@ public class CreativeModeTabsRegistry {
                         //BLOCKS
                         pOutput.accept(BlockRegistry.NEW_ZEALAND_BLOCK.get());
                         pOutput.accept(BlockRegistry.PINK_BLOCK.get());
-                        pOutput.accept(BlockRegistry.NAZI_BLOCK.get());
                         pOutput.accept(BlockRegistry.DARKNESS_BLOCK.get());
                         pOutput.accept(BlockRegistry.DUST_BLOCK.get());
 
@@ -136,7 +135,6 @@ public class CreativeModeTabsRegistry {
                         //MUSIC ITEMS
                         pOutput.accept(ItemsRegistry.TEMPORARY_MUSIC_DISC.get());
                         pOutput.accept(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC.get());
-                        pOutput.accept(ItemsRegistry.ERIKA_MUSIC_DISC.get());
 
 
                         //SPAWN EGGS
