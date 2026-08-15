@@ -22,8 +22,7 @@ public class ItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ItemTags.MUSIC_DISCS)
                 .add(ItemsRegistry.TEMPORARY_MUSIC_DISC.get())
-                .add(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC.get())
-                .add(ItemsRegistry.ERIKA_MUSIC_DISC.get());
+                .add(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC.get());
 
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(BlockRegistry.SCARLET_LOG.get().asItem());

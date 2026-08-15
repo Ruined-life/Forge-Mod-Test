@@ -27,7 +27,6 @@ public class BlockRegistry {
     /*---------------------------------------------------------------------------------------------------------------------------*/
     //BLOCKS
     public static final RegistryObject<Block> NEW_ZEALAND_BLOCK = registerBlock("new_zealand_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL)));
-    public static final RegistryObject<Block> NAZI_BLOCK = registerBlock("nazi_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistryObject<Block> PINK_BLOCK = registerBlock("pink_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PINK_WOOL).sound(SoundsRegistry.SOUND_BLOCK_SOUNDS)));
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block", () -> new DustBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
     public static final RegistryObject<Block> DARKNESS_BLOCK = registerBlock("darkness_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
