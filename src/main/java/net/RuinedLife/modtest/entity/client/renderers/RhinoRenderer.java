@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.RuinedLife.modtest.entity.client.ModModelLayers;
+import net.RuinedLife.modtest.entity.client.ModelLayers;
 import net.RuinedLife.modtest.entity.client.models.RhinoModel;
 import net.RuinedLife.modtest.entity.custom.RhinoEntity;
 import net.RuinedLife.modtest.modtest;
@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class RhinoRenderer extends MobRenderer<RhinoEntity, RhinoModel<RhinoEntity>> {
     public RhinoRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new RhinoModel<RhinoEntity>(pContext.bakeLayer(ModModelLayers.RHINO_LAYER)), 1.5f);
+        super(pContext, new RhinoModel<RhinoEntity>(pContext.bakeLayer(ModelLayers.RHINO_LAYER)), 1.5f);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -13,27 +13,27 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagGenerator extends ItemTagsProvider {
-    public ModItemTagGenerator(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
+public class ItemTagGenerator extends ItemTagsProvider {
+    public ItemTagGenerator(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(pOutput, pLookupProvider, pBlockTags, modtest.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.TEMPORARY_MUSIC_DISC.get())
-                .add(ModItems.BLACK_KNIFE_MUSIC_DISC.get())
-                .add(ModItems.ERIKA_MUSIC_DISC.get());
+                .add(ItemsRegistry.TEMPORARY_MUSIC_DISC.get())
+                .add(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC.get())
+                .add(ItemsRegistry.ERIKA_MUSIC_DISC.get());
 
         this.tag(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.SCARLET_LOG.get().asItem());
+                .add(BlockRegistry.SCARLET_LOG.get().asItem());
                 //.add(ModBlocks.SCARLET_WOOD.get().asItem());
                 //.add(ModBlocks.STRIPPED_SCARLET_LOG.get().asItem())
                 //.add(ModBlocks.STRIPPED_SCARLET_WOOD.get().asItem());
 
 
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.SCARLET_PLANKS.get().asItem());
+                .add(BlockRegistry.SCARLET_PLANKS.get().asItem());
 
 
     }

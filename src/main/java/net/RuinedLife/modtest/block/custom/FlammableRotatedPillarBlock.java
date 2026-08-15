@@ -1,6 +1,5 @@
 package net.RuinedLife.modtest.block.custom;
 
-import net.RuinedLife.modtest.registries.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;

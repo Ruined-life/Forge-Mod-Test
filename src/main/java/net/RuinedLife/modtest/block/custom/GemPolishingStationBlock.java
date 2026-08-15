@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.block.custom;
 
 import net.RuinedLife.modtest.block.entity.GemPolishingStationBlockEntity;
-import net.RuinedLife.modtest.block.entity.ModBlockEntities;
+import net.RuinedLife.modtest.block.entity.BlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -73,7 +73,7 @@ public class GemPolishingStationBlock extends BaseEntityBlock {
             return null;
         }
 
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.GEM_POLISHING_BE.get(),
+        return createTickerHelper(pBlockEntityType, BlockEntities.GEM_POLISHING_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel, pPos, pState));
     }
 

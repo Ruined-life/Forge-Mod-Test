@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.item.custom;
 
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModEntities;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.EntityRegistry;
 import net.RuinedLife.modtest.helpers.BlockScanner;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -65,14 +65,14 @@ public class ChestScanner extends Item {
                         }
 
                         // Check for your special key item
-                        if (stack.is(ModBlocks.GREEN.get().asItem())) {
+                        if (stack.is(BlockRegistry.GREEN.get().asItem())) {
                             pPlayer.displayClientMessage(
                                     Component.literal("FOUND GREEN FLOWER! SPAWNING GREEN"),
                                     false
                             );
 
                             if (pLevel instanceof ServerLevel serverLevel) {
-                                ModEntities.RHINO.get().spawn(
+                                EntityRegistry.RHINO.get().spawn(
                                         serverLevel,
                                         playerPos,
                                         MobSpawnType.EVENT

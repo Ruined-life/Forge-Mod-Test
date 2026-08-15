@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.block.entity;
 
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.RuinedLife.modtest.screen.GemPolishingStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -40,7 +39,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     private int maxProgress = 78;
 
     public GemPolishingStationBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.GEM_POLISHING_BE.get(), pPos, pBlockState);
+        super(BlockEntities.GEM_POLISHING_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -142,7 +141,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.pure_crystal.get(), 1);
+        ItemStack result = new ItemStack(ItemsRegistry.pure_crystal.get(), 1);
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
@@ -159,8 +158,8 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.FRIEND.get();
-        ItemStack result = new ItemStack(ModItems.pure_crystal.get());
+        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ItemsRegistry.FRIEND.get();
+        ItemStack result = new ItemStack(ItemsRegistry.pure_crystal.get());
 
         return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemOutputSlot(result.getItem());
 

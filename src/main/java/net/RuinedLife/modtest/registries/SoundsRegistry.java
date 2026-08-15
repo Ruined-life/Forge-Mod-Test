@@ -9,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModSounds {
+public class SoundsRegistry {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, modtest.MOD_ID);
     /*---------------------------------------------------------------------------------------------------------------------------*/
@@ -36,8 +36,8 @@ public class ModSounds {
     /*---------------------------------------------------------------------------------------------------------------------------*/
     /*METHODS*/
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
-            ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
-            ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);
+            SoundsRegistry.SOUND_BLOCK_BREAK, SoundsRegistry.SOUND_BLOCK_STEP, SoundsRegistry.SOUND_BLOCK_PLACE,
+            SoundsRegistry.SOUND_BLOCK_HIT, SoundsRegistry.SOUND_BLOCK_FALL);
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, name)));

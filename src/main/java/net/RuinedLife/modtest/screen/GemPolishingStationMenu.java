@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.screen;
 
 import net.RuinedLife.modtest.block.entity.GemPolishingStationBlockEntity;
-import net.RuinedLife.modtest.registries.ModBlocks;
+import net.RuinedLife.modtest.registries.BlockRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -104,7 +104,7 @@ public class GemPolishingStationMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.GEM_POLISHING_STATION.get());
+                pPlayer, BlockRegistry.GEM_POLISHING_STATION.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

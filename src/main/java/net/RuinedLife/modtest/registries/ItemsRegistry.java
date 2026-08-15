@@ -11,15 +11,15 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItems {
+public class ItemsRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, modtest.MOD_ID);
     /*---------------------------------------------------------------------------------------------------------------------------*/
     //MUSIC DISCS
-    public static final RegistryObject<Item> TEMPORARY_MUSIC_DISC = ITEMS.register("temporary", () -> new RecordItem(6, ModSounds.TEMPORARY, new Item.Properties().stacksTo(1), 3340));
-    public static final RegistryObject<Item> BLACK_KNIFE_MUSIC_DISC = ITEMS.register("black_knife", () -> new RecordItem(6, ModSounds.BLACK_KNIFE, new Item.Properties().stacksTo(1), 2420));
-    public static final RegistryObject<Item> ERIKA_MUSIC_DISC = ITEMS.register("erika", () -> new RecordItem(6, ModSounds.ERIKA, new Item.Properties().stacksTo(1), 3560));
+    public static final RegistryObject<Item> TEMPORARY_MUSIC_DISC = ITEMS.register("temporary", () -> new RecordItem(6, SoundsRegistry.TEMPORARY, new Item.Properties().stacksTo(1), 3340));
+    public static final RegistryObject<Item> BLACK_KNIFE_MUSIC_DISC = ITEMS.register("black_knife", () -> new RecordItem(6, SoundsRegistry.BLACK_KNIFE, new Item.Properties().stacksTo(1), 2420));
+    public static final RegistryObject<Item> ERIKA_MUSIC_DISC = ITEMS.register("erika", () -> new RecordItem(6, SoundsRegistry.ERIKA, new Item.Properties().stacksTo(1), 3560));
 
     //EXPERIMENTAL ITEMS
     public static final RegistryObject<Item> AOE_PICKAXE = ITEMS.register("aoe_pickaxe", () -> new AOEPickaxeItem(Tiers.WOOD, 2, 1, new Item.Properties()));
@@ -53,21 +53,21 @@ public class ModItems {
     public static final RegistryObject<Item> BANDANA = ITEMS.register("bandana", () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.bandana", ChatFormatting.DARK_GRAY));
 
     //CROPS
-    public static final RegistryObject<Item> kiwi_seeds = ITEMS.register("kiwi_seeds", () -> new ItemNameBlockItem(ModBlocks.KIWI_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> kiwi_seeds = ITEMS.register("kiwi_seeds", () -> new ItemNameBlockItem(BlockRegistry.KIWI_CROP.get(), new Item.Properties()));
 
     //FOODS
-    public static final RegistryObject<Item> kiwi_fruit = ITEMS.register("kiwi_fruit", () -> new Item(new Item.Properties().food(ModFoods.KIWI)));
+    public static final RegistryObject<Item> kiwi_fruit = ITEMS.register("kiwi_fruit", () -> new Item(new Item.Properties().food(FoodRegistries.KIWI)));
 
     //PIES
-    public static final RegistryObject<Item> PIE_NORMAL = ITEMS.register("pie_normal", () -> new Item(new Item.Properties().food(ModFoods.PIE_NORMAL)));
-    public static final RegistryObject<Item> PIE_AQUA = ITEMS.register("pie_aqua", () -> new Item(new Item.Properties().food(ModFoods.PIE_AQUA)));
-    public static final RegistryObject<Item> PIE_PURPLE = ITEMS.register("pie_purple", () -> new Item(new Item.Properties().food(ModFoods.PIE_PURPLE)));
-    public static final RegistryObject<Item> PIE_GREEN = ITEMS.register("pie_green", () -> new Item(new Item.Properties().food(ModFoods.PIE_GREEN)));
-    public static final RegistryObject<Item> PIE_GOLD = ITEMS.register("pie_gold", () -> new Item(new Item.Properties().food(ModFoods.PIE_GOLD)));
-    public static final RegistryObject<Item> PIE_YELLOW = ITEMS.register("pie_yellow", () -> new Item(new Item.Properties().food(ModFoods.PIE_YELLOW)));
-    public static final RegistryObject<Item> PIE_BLUE = ITEMS.register("pie_blue", () -> new Item(new Item.Properties().food(ModFoods.PIE_BLUE)));
-    public static final RegistryObject<Item> PIE_ORANGE = ITEMS.register("pie_orange", () -> new Item(new Item.Properties().food(ModFoods.PIE_ORANGE)));
-    public static final RegistryObject<Item> PIE_PINK = ITEMS.register("pie_pink", () -> new Item(new Item.Properties().food(ModFoods.PIE_PINK)));
+    public static final RegistryObject<Item> PIE_NORMAL = ITEMS.register("pie_normal", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_NORMAL)));
+    public static final RegistryObject<Item> PIE_AQUA = ITEMS.register("pie_aqua", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_AQUA)));
+    public static final RegistryObject<Item> PIE_PURPLE = ITEMS.register("pie_purple", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_PURPLE)));
+    public static final RegistryObject<Item> PIE_GREEN = ITEMS.register("pie_green", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_GREEN)));
+    public static final RegistryObject<Item> PIE_GOLD = ITEMS.register("pie_gold", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_GOLD)));
+    public static final RegistryObject<Item> PIE_YELLOW = ITEMS.register("pie_yellow", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_YELLOW)));
+    public static final RegistryObject<Item> PIE_BLUE = ITEMS.register("pie_blue", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_BLUE)));
+    public static final RegistryObject<Item> PIE_ORANGE = ITEMS.register("pie_orange", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_ORANGE)));
+    public static final RegistryObject<Item> PIE_PINK = ITEMS.register("pie_pink", () -> new Item(new Item.Properties().food(FoodRegistries.PIE_PINK)));
 
     //ADVANCED ITEMS
     public static final RegistryObject<Item> FRIEND = ITEMS.register("friend_item", () -> new FRIENDITEM(new Item.Properties()));
@@ -75,11 +75,11 @@ public class ModItems {
     public static final RegistryObject<Item> TELEPORTWAND = ITEMS.register("teleport_wand", () -> new TeleportWand(new Item.Properties()));
 
     //TOOLS/WEAPONS
-    public static final RegistryObject<Item> PINK_SWORD = ITEMS.register("pink_sword", () -> new SwordItem(ModToolTiers.PINK, 5, 2, new Item.Properties()));
-    public static final RegistryObject<Item> PINK_PICKAXE = ITEMS.register("pink_pickaxe", () -> new PickaxeItem(ModToolTiers.PINK, 2, 1, new Item.Properties()));
-    public static final RegistryObject<Item> PINK_AXE = ITEMS.register("pink_axe", () -> new AxeItem(ModToolTiers.PINK, 10, 1, new Item.Properties()));
-    public static final RegistryObject<Item> PINK_SHOVEL = ITEMS.register("pink_shovel", () -> new ShovelItem(ModToolTiers.PINK, 2, 2, new Item.Properties()));
-    public static final RegistryObject<Item> PINK_HOE = ITEMS.register("pink_hoe", () -> new ShovelItem(ModToolTiers.PINK, 1, 100, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_SWORD = ITEMS.register("pink_sword", () -> new SwordItem(ToolTiersRegistry.PINK, 5, 2, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_PICKAXE = ITEMS.register("pink_pickaxe", () -> new PickaxeItem(ToolTiersRegistry.PINK, 2, 1, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_AXE = ITEMS.register("pink_axe", () -> new AxeItem(ToolTiersRegistry.PINK, 10, 1, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_SHOVEL = ITEMS.register("pink_shovel", () -> new ShovelItem(ToolTiersRegistry.PINK, 2, 2, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_HOE = ITEMS.register("pink_hoe", () -> new ShovelItem(ToolTiersRegistry.PINK, 1, 100, new Item.Properties()));
 
     //ARMOR
     public static final RegistryObject<Item> PINK_HELMET = ITEMS.register("pink_helmet", () -> new ArmorItem(ModArmorMaterials.PINK, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -91,9 +91,9 @@ public class ModItems {
     public static final RegistryObject<Item> SUN = ITEMS.register("sun_item", () -> new FuelItem(new Item.Properties(), 99999999));
 
     //SPAWN EGGS
-    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5, new Item.Properties()));
-    public static final RegistryObject<Item> AQUA_SPAWN_EGG = ITEMS.register("aqua_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.AQUA, 0x55ffff, 0xff0000, new Item.Properties()));
-    public static final RegistryObject<Item> GOKU_SPAWN_EGG = ITEMS.register("goku_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GOKU, 0x55ffff, 0xff0000, new Item.Properties()));
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.RHINO, 0x7e9680, 0xc5d1c5, new Item.Properties()));
+    public static final RegistryObject<Item> AQUA_SPAWN_EGG = ITEMS.register("aqua_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.AQUA, 0x55ffff, 0xff0000, new Item.Properties()));
+    public static final RegistryObject<Item> GOKU_SPAWN_EGG = ITEMS.register("goku_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.GOKU, 0x55ffff, 0xff0000, new Item.Properties()));
     /*---------------------------------------------------------------------------------------------------------------------------*/
     /*METHODS*/
     public static void register(IEventBus eventBus){

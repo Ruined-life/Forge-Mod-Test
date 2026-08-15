@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.RuinedLife.modtest.entity.client.ModModelLayers;
+import net.RuinedLife.modtest.entity.client.ModelLayers;
 import net.RuinedLife.modtest.entity.client.models.AquaModel;
 import net.RuinedLife.modtest.entity.custom.AquaEntity;
 import net.RuinedLife.modtest.modtest;
@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class AquaRenderer extends MobRenderer<AquaEntity, AquaModel<AquaEntity>> {
     public AquaRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new AquaModel<>(pContext.bakeLayer(ModModelLayers.AQUA_LAYER)), 0.5f);
+        super(pContext, new AquaModel<>(pContext.bakeLayer(ModelLayers.AQUA_LAYER)), 0.5f);
     }
 
     @Override

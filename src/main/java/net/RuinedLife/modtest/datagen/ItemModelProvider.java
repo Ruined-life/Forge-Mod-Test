@@ -1,99 +1,98 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+public class ItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider {
+    public ItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, modtest.MOD_ID, existingFileHelper);
     }
     /*---------------------------------------------------------------------------------------------------------------------------*/
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.TEMPORARY_MUSIC_DISC);
-        simpleItem(ModItems.BLACK_KNIFE_MUSIC_DISC);
-        simpleItem(ModItems.ERIKA_MUSIC_DISC);
+        simpleItem(ItemsRegistry.TEMPORARY_MUSIC_DISC);
+        simpleItem(ItemsRegistry.BLACK_KNIFE_MUSIC_DISC);
+        simpleItem(ItemsRegistry.ERIKA_MUSIC_DISC);
 
         //CUSTOM TOOLS
-        simpleItem(ModItems.AOE_PICKAXE);
-        simpleItem(ModItems.CHEST_SCANNER);
+        simpleItem(ItemsRegistry.AOE_PICKAXE);
+        simpleItem(ItemsRegistry.CHEST_SCANNER);
 
-        simpleItem(ModItems.crystal_a);
-        simpleItem(ModItems.crystal_b);
-        simpleItem(ModItems.crystal_c);
-        simpleItem(ModItems.crystal_d);
-        simpleItem(ModItems.crystal_e);
-        simpleItem(ModItems.pure_crystal);
-        simpleItem(ModItems.kiwi_fruit);
-        simpleItem(ModItems.kiwi_seeds);
-        simpleItem(ModItems.FRIEND);
-        simpleItem(ModItems.FEATHER);
-        simpleItem(ModItems.SUN);
+        simpleItem(ItemsRegistry.crystal_a);
+        simpleItem(ItemsRegistry.crystal_b);
+        simpleItem(ItemsRegistry.crystal_c);
+        simpleItem(ItemsRegistry.crystal_d);
+        simpleItem(ItemsRegistry.crystal_e);
+        simpleItem(ItemsRegistry.pure_crystal);
+        simpleItem(ItemsRegistry.kiwi_fruit);
+        simpleItem(ItemsRegistry.kiwi_seeds);
+        simpleItem(ItemsRegistry.FRIEND);
+        simpleItem(ItemsRegistry.FEATHER);
+        simpleItem(ItemsRegistry.SUN);
 
         //FOOD
-        simpleItem(ModItems.PIE_NORMAL);
-        simpleItem(ModItems.PIE_AQUA);
-        simpleItem(ModItems.PIE_PURPLE);
-        simpleItem(ModItems.PIE_GOLD);
-        simpleItem(ModItems.PIE_GREEN);
-        simpleItem(ModItems.PIE_YELLOW);
-        simpleItem(ModItems.PIE_ORANGE);
-        simpleItem(ModItems.PIE_BLUE);
-        simpleItem(ModItems.PIE_PINK);
+        simpleItem(ItemsRegistry.PIE_NORMAL);
+        simpleItem(ItemsRegistry.PIE_AQUA);
+        simpleItem(ItemsRegistry.PIE_PURPLE);
+        simpleItem(ItemsRegistry.PIE_GOLD);
+        simpleItem(ItemsRegistry.PIE_GREEN);
+        simpleItem(ItemsRegistry.PIE_YELLOW);
+        simpleItem(ItemsRegistry.PIE_ORANGE);
+        simpleItem(ItemsRegistry.PIE_BLUE);
+        simpleItem(ItemsRegistry.PIE_PINK);
 
         //FLOWER ITEMS
-        simpleItem(ModItems.TOY_KNIFE);
-        simpleItem(ModItems.RIBBON);
+        simpleItem(ItemsRegistry.TOY_KNIFE);
+        simpleItem(ItemsRegistry.RIBBON);
 
-        simpleItem(ModItems.TOY_GUN);
-        simpleItem(ModItems.COWBOY_HAT);
+        simpleItem(ItemsRegistry.TOY_GUN);
+        simpleItem(ItemsRegistry.COWBOY_HAT);
 
-        simpleItem(ModItems.BURNT_PAN);
-        simpleItem(ModItems.APRON);
+        simpleItem(ItemsRegistry.BURNT_PAN);
+        simpleItem(ItemsRegistry.APRON);
 
-        simpleItem(ModItems.TORN_NOTEBOOK);
-        simpleItem(ModItems.CLOUDY_GLASSES);
+        simpleItem(ItemsRegistry.TORN_NOTEBOOK);
+        simpleItem(ItemsRegistry.CLOUDY_GLASSES);
 
-        simpleItem(ModItems.BALLET_SHOES);
-        simpleItem(ModItems.TUTU);
+        simpleItem(ItemsRegistry.BALLET_SHOES);
+        simpleItem(ItemsRegistry.TUTU);
 
-        simpleItem(ModItems.TOUGH_GLOVE);
-        simpleItem(ModItems.BANDANA);
+        simpleItem(ItemsRegistry.TOUGH_GLOVE);
+        simpleItem(ItemsRegistry.BANDANA);
 
-        simpleItem(ModItems.AQUA_SPAWN_EGG);
+        simpleItem(ItemsRegistry.AQUA_SPAWN_EGG);
 
 
-        fenceItem(ModBlocks.DARKNESS_FENCE, ModBlocks.DARKNESS_BLOCK);
-        buttonItem(ModBlocks.DARKNESS_BUTTON, ModBlocks.DARKNESS_BLOCK);
-        wallItem(ModBlocks.DARKNESS_WALL, ModBlocks.DARKNESS_BLOCK);
-        trapdoorItem(ModBlocks.DARKNESS_TRAP_DOOR);
+        fenceItem(BlockRegistry.DARKNESS_FENCE, BlockRegistry.DARKNESS_BLOCK);
+        buttonItem(BlockRegistry.DARKNESS_BUTTON, BlockRegistry.DARKNESS_BLOCK);
+        wallItem(BlockRegistry.DARKNESS_WALL, BlockRegistry.DARKNESS_BLOCK);
+        trapdoorItem(BlockRegistry.DARKNESS_TRAP_DOOR);
 
         //handheldItem(ModItems.PINK_SWORD);
-        handheldItem(ModItems.PINK_PICKAXE);
-        handheldItem(ModItems.PINK_AXE);
-        handheldItem(ModItems.PINK_SHOVEL);
-        handheldItem(ModItems.PINK_HOE);
+        handheldItem(ItemsRegistry.PINK_PICKAXE);
+        handheldItem(ItemsRegistry.PINK_AXE);
+        handheldItem(ItemsRegistry.PINK_SHOVEL);
+        handheldItem(ItemsRegistry.PINK_HOE);
 
-        simpleBlockItemBlockTexture(ModBlocks.AQUA);
-        simpleBlockItemBlockTexture(ModBlocks.PURPLE);
-        simpleBlockItemBlockTexture(ModBlocks.GREEN);
-        simpleBlockItemBlockTexture(ModBlocks.GOLD);
-        simpleBlockItemBlockTexture(ModBlocks.YELLOW);
-        simpleBlockItemBlockTexture(ModBlocks.ORANGE);
-        simpleBlockItemBlockTexture(ModBlocks.BLUE);
-        simpleBlockItemBlockTexture(ModBlocks.PINK);
+        simpleBlockItemBlockTexture(BlockRegistry.AQUA);
+        simpleBlockItemBlockTexture(BlockRegistry.PURPLE);
+        simpleBlockItemBlockTexture(BlockRegistry.GREEN);
+        simpleBlockItemBlockTexture(BlockRegistry.GOLD);
+        simpleBlockItemBlockTexture(BlockRegistry.YELLOW);
+        simpleBlockItemBlockTexture(BlockRegistry.ORANGE);
+        simpleBlockItemBlockTexture(BlockRegistry.BLUE);
+        simpleBlockItemBlockTexture(BlockRegistry.PINK);
 
-        withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ItemsRegistry.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
     }
     /*---------------------------------------------------------------------------------------------------------------------------*/

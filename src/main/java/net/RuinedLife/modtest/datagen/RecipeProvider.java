@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.datagen;
 
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -15,10 +15,10 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> SMELTABLE_ITEMS = List.of(ModItems.kiwi_fruit.get());
+public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider implements IConditionBuilder {
+    private static final List<ItemLike> SMELTABLE_ITEMS = List.of(ItemsRegistry.kiwi_fruit.get());
 
-    public ModRecipeProvider(PackOutput pOutput) {
+    public RecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
     /*---------------------------------------------------------------------------------------------------------------------------*/
@@ -29,20 +29,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         //PURE CRYSTAL
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.pure_crystal.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.pure_crystal.get())
                 .pattern(" A ")
                 .pattern("BED")
                 .pattern(" C ")
-                .define('A', ModItems.crystal_a.get())
-                .define('B', ModItems.crystal_b.get())
-                .define('E', ModItems.crystal_e.get())
-                .define('D', ModItems.crystal_d.get())
-                .define('C', ModItems.crystal_c.get())
-                .unlockedBy(getHasName(ModItems.crystal_a.get()), has(ModItems.crystal_a.get()))
+                .define('A', ItemsRegistry.crystal_a.get())
+                .define('B', ItemsRegistry.crystal_b.get())
+                .define('E', ItemsRegistry.crystal_e.get())
+                .define('D', ItemsRegistry.crystal_d.get())
+                .define('C', ItemsRegistry.crystal_c.get())
+                .unlockedBy(getHasName(ItemsRegistry.crystal_a.get()), has(ItemsRegistry.crystal_a.get()))
                 .save(pWriter);
 
         //PURE C
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEW_ZEALAND_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BlockRegistry.NEW_ZEALAND_BLOCK.get())
                 .pattern("AAA")
                 .pattern("BCB")
                 .pattern("AAA")
@@ -53,9 +53,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         //IDK
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FRIEND.get(), 1)
-                .requires(ModItems.FRIEND.get())
-                .unlockedBy(getHasName(ModItems.FRIEND.get()), has(ModItems.FRIEND.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemsRegistry.FRIEND.get(), 1)
+                .requires(ItemsRegistry.FRIEND.get())
+                .unlockedBy(getHasName(ItemsRegistry.FRIEND.get()), has(ItemsRegistry.FRIEND.get()))
                 .save(pWriter);
 
 
@@ -63,146 +63,146 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //NORMAL PIE
 
         //AQUA PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_AQUA.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_AQUA.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.AQUA.get())
+                .define('A', BlockRegistry.AQUA.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.TOY_KNIFE.get(),
-                        ModItems.RIBBON.get()
+                        ItemsRegistry.TOY_KNIFE.get(),
+                        ItemsRegistry.RIBBON.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
 
         //PURPLE PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_PURPLE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_PURPLE.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.PURPLE.get())
+                .define('A', BlockRegistry.PURPLE.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.TORN_NOTEBOOK.get(),
-                        ModItems.CLOUDY_GLASSES.get()
+                        ItemsRegistry.TORN_NOTEBOOK.get(),
+                        ItemsRegistry.CLOUDY_GLASSES.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
 
         //GREEN PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_GREEN.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_GREEN.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.GREEN.get())
+                .define('A', BlockRegistry.GREEN.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.BURNT_PAN.get(),
-                        ModItems.APRON.get()
+                        ItemsRegistry.BURNT_PAN.get(),
+                        ItemsRegistry.APRON.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
 
         //YELLOW PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_YELLOW.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_YELLOW.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.YELLOW.get())
+                .define('A', BlockRegistry.YELLOW.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.TOY_GUN.get(),
-                        ModItems.COWBOY_HAT.get()
+                        ItemsRegistry.TOY_GUN.get(),
+                        ItemsRegistry.COWBOY_HAT.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
         //ORANGE PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_ORANGE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_ORANGE.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.ORANGE.get())
+                .define('A', BlockRegistry.ORANGE.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.TOUGH_GLOVE.get(),
-                        ModItems.BANDANA.get()
+                        ItemsRegistry.TOUGH_GLOVE.get(),
+                        ItemsRegistry.BANDANA.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
 
         //BLUE PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_BLUE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_BLUE.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.BLUE.get())
+                .define('A', BlockRegistry.BLUE.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.BALLET_SHOES.get(),
-                        ModItems.TUTU.get()
+                        ItemsRegistry.BALLET_SHOES.get(),
+                        ItemsRegistry.TUTU.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
 
         //PINK PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_PINK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_PINK.get())
                 .pattern("BBB")
                 .pattern("DAD")
                 .pattern("CCC")
-                .define('A', ModBlocks.PINK.get())
+                .define('A', BlockRegistry.PINK.get())
                 .define('B', Items.EGG)
                 .define('C', Items.WHEAT)
                 .define('D', Ingredient.of(
-                        ModItems.PINK_SWORD.get(),
-                        ModItems.PINK_BOOTS.get(),
-                        ModItems.PINK_LEGGINGS.get(),
-                        ModItems.PINK_CHESTPLATE.get(),
-                        ModItems.PINK_HELMET.get(),
-                        ModItems.PINK_PICKAXE.get(),
-                        ModItems.PINK_AXE.get(),
-                        ModItems.PINK_SHOVEL.get(),
-                        ModItems.PINK_HOE.get()
+                        ItemsRegistry.PINK_SWORD.get(),
+                        ItemsRegistry.PINK_BOOTS.get(),
+                        ItemsRegistry.PINK_LEGGINGS.get(),
+                        ItemsRegistry.PINK_CHESTPLATE.get(),
+                        ItemsRegistry.PINK_HELMET.get(),
+                        ItemsRegistry.PINK_PICKAXE.get(),
+                        ItemsRegistry.PINK_AXE.get(),
+                        ItemsRegistry.PINK_SHOVEL.get(),
+                        ItemsRegistry.PINK_HOE.get()
 
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
         //GOLD PIE
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_GOLD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemsRegistry.PIE_GOLD.get())
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
-                .define('A', ModItems.PIE_NORMAL.get())
+                .define('A', ItemsRegistry.PIE_NORMAL.get())
                 .define('B', Ingredient.of(
-                        ModBlocks.AQUA.get(),
-                        ModBlocks.PURPLE.get(),
-                        ModBlocks.GREEN.get(),
-                        ModBlocks.GOLD.get(),
-                        ModBlocks.YELLOW.get(),
-                        ModBlocks.BLUE.get(),
-                        ModBlocks.ORANGE.get(),
-                        ModBlocks.PINK.get()
+                        BlockRegistry.AQUA.get(),
+                        BlockRegistry.PURPLE.get(),
+                        BlockRegistry.GREEN.get(),
+                        BlockRegistry.GOLD.get(),
+                        BlockRegistry.YELLOW.get(),
+                        BlockRegistry.BLUE.get(),
+                        BlockRegistry.ORANGE.get(),
+                        BlockRegistry.PINK.get()
                 ))
-                .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
+                .unlockedBy(getHasName(ItemsRegistry.PIE_NORMAL.get()), has(ItemsRegistry.PIE_NORMAL.get()))
                 .save(pWriter);
 
     }

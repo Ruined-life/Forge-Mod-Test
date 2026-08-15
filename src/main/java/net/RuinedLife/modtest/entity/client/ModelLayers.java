@@ -4,7 +4,7 @@ import net.RuinedLife.modtest.modtest;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
 
-public class ModModelLayers {
+public class ModelLayers {
 
     public static final ModelLayerLocation RHINO_LAYER = new ModelLayerLocation(
             new ResourceLocation(modtest.MOD_ID, "rhino_layer"), "main");

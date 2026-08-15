@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModVillagers {
+public class VillagersRegistry {
     public static final DeferredRegister<PoiType> POI_TYPES =
             DeferredRegister.create(ForgeRegistries.POI_TYPES, modtest.MOD_ID);
 
@@ -18,7 +18,7 @@ public class ModVillagers {
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, modtest.MOD_ID);
     /*---------------------------------------------------------------------------------------------------------------------------*/
     public static final RegistryObject<PoiType> SOUND_POI = POI_TYPES.register("sound_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.PINK_BLOCK.get().getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(BlockRegistry.PINK_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> SOUND_MASTER =

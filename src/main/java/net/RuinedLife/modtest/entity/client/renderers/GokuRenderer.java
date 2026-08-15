@@ -1,11 +1,9 @@
 package net.RuinedLife.modtest.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.RuinedLife.modtest.entity.client.ModModelLayers;
+import net.RuinedLife.modtest.entity.client.ModelLayers;
 import net.RuinedLife.modtest.entity.client.models.GokuModel;
-import net.RuinedLife.modtest.entity.client.models.RhinoModel;
 import net.RuinedLife.modtest.entity.custom.GokuEntity;
-import net.RuinedLife.modtest.entity.custom.RhinoEntity;
 import net.RuinedLife.modtest.modtest;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -14,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class GokuRenderer extends MobRenderer<GokuEntity, GokuModel<GokuEntity>> {
     public GokuRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new GokuModel<>(pContext.bakeLayer(ModModelLayers.GOKU_LAYER)), 1f);
+        super(pContext, new GokuModel<>(pContext.bakeLayer(ModelLayers.GOKU_LAYER)), 1f);
     }
 
     @Override

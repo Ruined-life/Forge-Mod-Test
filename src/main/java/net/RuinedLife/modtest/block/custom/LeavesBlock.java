@@ -3,11 +3,10 @@ package net.RuinedLife.modtest.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModLeavesBlock extends LeavesBlock {
-    public ModLeavesBlock(Properties properties) {
+public class LeavesBlock extends net.minecraft.world.level.block.LeavesBlock {
+    public LeavesBlock(Properties properties) {
         super(properties);
     }
 

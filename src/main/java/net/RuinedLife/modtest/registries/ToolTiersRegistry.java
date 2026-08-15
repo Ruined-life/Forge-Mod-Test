@@ -10,11 +10,11 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 import java.util.List;
 
-public class ModToolTiers {
+public class ToolTiersRegistry {
 
     public static final Tier PINK = TierSortingRegistry.registerTier(
             new ForgeTier(5, 1500, 10f, 4f, 25,
-                    ModTags.Blocks.NEEDS_PINK_TOOL, () -> Ingredient.of(ModItems.pure_crystal.get())),
+                    TagsRegistry.Blocks.NEEDS_PINK_TOOL, () -> Ingredient.of(ItemsRegistry.pure_crystal.get())),
             new ResourceLocation(modtest.MOD_ID, "pink"), List.of(Tiers.NETHERITE), List.of());
 
 }

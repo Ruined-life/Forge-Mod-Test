@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.entity.custom;
 
-import net.RuinedLife.modtest.registries.ModEntities;
+import net.RuinedLife.modtest.registries.EntityRegistry;
 import net.RuinedLife.modtest.entity.ai.RhinoAttackGoal;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -129,7 +129,7 @@ public class RhinoEntity extends Animal {
 
     @Override
     public @Nullable AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.RHINO.get().create(pLevel);
+        return EntityRegistry.RHINO.get().create(pLevel);
     }
 
     @Override

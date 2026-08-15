@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.event;
 
 
-import net.RuinedLife.modtest.entity.client.ModModelLayers;
+import net.RuinedLife.modtest.entity.client.ModelLayers;
 import net.RuinedLife.modtest.entity.client.models.AquaModel;
 import net.RuinedLife.modtest.entity.client.models.GokuModel;
 import net.RuinedLife.modtest.entity.client.models.RhinoModel;
@@ -16,9 +16,9 @@ public class ModEventBusClientEvents {
 
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
-        event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.AQUA_LAYER, AquaModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.GOKU_LAYER, GokuModel::createBodyLayer);
+        event.registerLayerDefinition(ModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
+        event.registerLayerDefinition(ModelLayers.AQUA_LAYER, AquaModel::createBodyLayer);
+        event.registerLayerDefinition(ModelLayers.GOKU_LAYER, GokuModel::createBodyLayer);
     }
 
 }

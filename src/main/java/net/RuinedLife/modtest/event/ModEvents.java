@@ -1,10 +1,10 @@
 package net.RuinedLife.modtest.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.registries.ModVillagers;
+import net.RuinedLife.modtest.registries.VillagersRegistry;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -34,12 +34,12 @@ public class ModEvents {
                     //WHAT YOU GIVE
                     new ItemStack(Items.EMERALD, 2),
                     //WHAT YOU GET
-                    new ItemStack(ModBlocks.AQUA.get(), 1), 10, 8, 0.02f));
+                    new ItemStack(BlockRegistry.AQUA.get(), 1), 10, 8, 0.02f));
 
             //LEVEL 2
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 1),
-                    new ItemStack(ModBlocks.PINK_BLOCK.get(), 64), 10, 8, 0.02f));
+                    new ItemStack(BlockRegistry.PINK_BLOCK.get(), 64), 10, 8, 0.02f));
 
 
         }
@@ -56,12 +56,12 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.SOUND_MASTER.get()){
+        if(event.getType() == VillagersRegistry.SOUND_MASTER.get()){
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 2),
-                    new ItemStack(ModItems.PINK_SWORD.get()),
+                    new ItemStack(ItemsRegistry.PINK_SWORD.get()),
                     2,8, 0.02f));
 
 
@@ -79,12 +79,12 @@ public class ModEvents {
 
         genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.EMERALD, 1),
-                new ItemStack(ModItems.FEATHER.get(), 1), 10, 2, 0.2f));
+                new ItemStack(ItemsRegistry.FEATHER.get(), 1), 10, 2, 0.2f));
 
 
         rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 1),
-                        new ItemStack(ModItems.FRIEND.get(), 1), 10, 2, 0.2f));
+                        new ItemStack(ItemsRegistry.FRIEND.get(), 1), 10, 2, 0.2f));
 
 
     }

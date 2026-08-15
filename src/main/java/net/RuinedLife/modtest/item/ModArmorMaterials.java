@@ -1,7 +1,7 @@
 package net.RuinedLife.modtest.item;
 
 import net.RuinedLife.modtest.modtest;
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
     //if you have a second armor material then duplicate and separate with a comma
     PINK("pink", 26, new int[] { 30,30, 30, 30 }, 25,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 5f, 5f, () -> Ingredient.of(ModItems.FRIEND.get()));
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 5f, 5f, () -> Ingredient.of(ItemsRegistry.FRIEND.get()));
 
 
 

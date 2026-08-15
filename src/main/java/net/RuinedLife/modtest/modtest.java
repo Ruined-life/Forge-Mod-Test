@@ -1,17 +1,17 @@
 package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
-import net.RuinedLife.modtest.block.entity.ModBlockEntities;
+import net.RuinedLife.modtest.block.entity.BlockEntities;
 import net.RuinedLife.modtest.entity.client.renderers.AquaRenderer;
 import net.RuinedLife.modtest.entity.client.renderers.GokuRenderer;
-import net.RuinedLife.modtest.registries.ModEntities;
+import net.RuinedLife.modtest.registries.EntityRegistry;
 import net.RuinedLife.modtest.entity.client.renderers.RhinoRenderer;
-import net.RuinedLife.modtest.registries.ModCreativeModTabs;
-import net.RuinedLife.modtest.registries.ModItems;
-import net.RuinedLife.modtest.registries.ModBlocks;
-import net.RuinedLife.modtest.registries.ModLootModifiers;
-import net.RuinedLife.modtest.registries.ModSounds;
-import net.RuinedLife.modtest.registries.ModVillagers;
+import net.RuinedLife.modtest.registries.CreativeModeTabsRegistry;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
+import net.RuinedLife.modtest.registries.BlockRegistry;
+import net.RuinedLife.modtest.registries.LootModifiersRegistry;
+import net.RuinedLife.modtest.registries.SoundsRegistry;
+import net.RuinedLife.modtest.registries.VillagersRegistry;
 import net.RuinedLife.modtest.screen.GemPolishingStationScreen;
 import net.RuinedLife.modtest.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -40,14 +40,14 @@ public class modtest {
     public modtest(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-        ModLootModifiers.register((modEventBus));
-        ModVillagers.register(modEventBus);
-        ModSounds.register(modEventBus);
-        ModEntities.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
+        CreativeModeTabsRegistry.register(modEventBus);
+        ItemsRegistry.register(modEventBus);
+        BlockRegistry.register(modEventBus);
+        LootModifiersRegistry.register((modEventBus));
+        VillagersRegistry.register(modEventBus);
+        SoundsRegistry.register(modEventBus);
+        EntityRegistry.register(modEventBus);
+        BlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -57,14 +57,14 @@ public class modtest {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.AQUA.getId(), ModBlocks.POTTED_AQUA);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PURPLE.getId(), ModBlocks.POTTED_PURPLE);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GREEN.getId(), ModBlocks.POTTED_GREEN);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GOLD.getId(), ModBlocks.POTTED_GOLD);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.YELLOW.getId(), ModBlocks.POTTED_YELLOW);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ORANGE.getId(), ModBlocks.POTTED_ORANGE);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLUE.getId(), ModBlocks.POTTED_BLUE);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK.getId(), ModBlocks.POTTED_PINK);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.AQUA.getId(), BlockRegistry.POTTED_AQUA);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.PURPLE.getId(), BlockRegistry.POTTED_PURPLE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.GREEN.getId(), BlockRegistry.POTTED_GREEN);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.GOLD.getId(), BlockRegistry.POTTED_GOLD);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.YELLOW.getId(), BlockRegistry.POTTED_YELLOW);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.ORANGE.getId(), BlockRegistry.POTTED_ORANGE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.BLUE.getId(), BlockRegistry.POTTED_BLUE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.PINK.getId(), BlockRegistry.POTTED_PINK);
         });
 
     }
@@ -72,14 +72,14 @@ public class modtest {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.crystal_a);
-            event.accept(ModItems.crystal_b);
-            event.accept(ModItems.crystal_c);
-            event.accept(ModItems.crystal_d);
-            event.accept(ModItems.crystal_e);
-            event.accept(ModItems.pure_crystal);
+            event.accept(ItemsRegistry.crystal_a);
+            event.accept(ItemsRegistry.crystal_b);
+            event.accept(ItemsRegistry.crystal_c);
+            event.accept(ItemsRegistry.crystal_d);
+            event.accept(ItemsRegistry.crystal_e);
+            event.accept(ItemsRegistry.pure_crystal);
 
-            event.accept(ModItems.kiwi_fruit);
+            event.accept(ItemsRegistry.kiwi_fruit);
         }
     }
 
@@ -95,9 +95,9 @@ public class modtest {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
-            EntityRenderers.register(ModEntities.AQUA.get(), AquaRenderer::new);
-            EntityRenderers.register(ModEntities.GOKU.get(), GokuRenderer::new);
+            EntityRenderers.register(EntityRegistry.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(EntityRegistry.AQUA.get(), AquaRenderer::new);
+            EntityRenderers.register(EntityRegistry.GOKU.get(), GokuRenderer::new);
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
 

@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.block.custom;
 
-import net.RuinedLife.modtest.registries.ModItems;
+import net.RuinedLife.modtest.registries.ItemsRegistry;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -32,7 +32,7 @@ public class KiwiFruitCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.kiwi_seeds.get();
+        return ItemsRegistry.kiwi_seeds.get();
     }
 
     @Override

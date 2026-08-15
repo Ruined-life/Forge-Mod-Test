@@ -1,9 +1,6 @@
 package net.RuinedLife.modtest.entity.custom;
 
-import com.google.common.collect.ImmutableMap;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import net.RuinedLife.modtest.registries.ModSounds;
+import net.RuinedLife.modtest.registries.SoundsRegistry;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -24,7 +21,6 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -34,7 +30,7 @@ public class GokuEntity extends Animal {
             SynchedEntityData.defineId(GokuEntity.class, EntityDataSerializers.BOOLEAN);
 
     public List situationalSounds = List.of(
-            ModSounds.SOUND_BLOCK_FALL
+            SoundsRegistry.SOUND_BLOCK_FALL
     );
 
     public GokuEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
@@ -145,7 +141,7 @@ public class GokuEntity extends Animal {
     }
 
     public void playSituationalSounds(){
-        playSound(ModSounds.AQUA_DEATH.get(), 1f, 1f);
+        playSound(SoundsRegistry.AQUA_DEATH.get(), 1f, 1f);
     }
 
     public boolean canStandOnFluid(FluidState pFluidState) {

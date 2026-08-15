@@ -1,6 +1,6 @@
 package net.RuinedLife.modtest.item.custom;
 
-import net.RuinedLife.modtest.registries.ModSounds;
+import net.RuinedLife.modtest.registries.SoundsRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -39,7 +39,7 @@ public class FRIENDITEM extends Item {
                     player.getX(),                  // X position
                     player.getY(),                  // Y position
                     player.getZ(),                  // Z position
-                    ModSounds.FRIEND_ACTIVATED.get(), // The sound event
+                    SoundsRegistry.FRIEND_ACTIVATED.get(), // The sound event
                     SoundSource.PLAYERS,           // Sound category (Players, Blocks, Ambient, etc.)
                     1.0F,                           // Volume (1.0 = normal volume)
                     1.0F                            // Pitch (1.0 = normal pitch)
