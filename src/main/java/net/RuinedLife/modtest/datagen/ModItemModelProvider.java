@@ -17,7 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, modtest.MOD_ID, existingFileHelper);
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     @Override
     protected void registerModels() {
         simpleItem(ModItems.TEMPORARY_MUSIC_DISC);
@@ -93,12 +93,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.BLUE);
         simpleBlockItemBlockTexture(ModBlocks.PINK);
 
-
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
-
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         assert item.getId() != null;
         return withExistingParent(item.getId().getPath(),

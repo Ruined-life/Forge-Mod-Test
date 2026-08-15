@@ -14,11 +14,9 @@ public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES =
             DeferredRegister.create(ForgeRegistries.POI_TYPES, modtest.MOD_ID);
 
-
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, modtest.MOD_ID);
-
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     public static final RegistryObject<PoiType> SOUND_POI = POI_TYPES.register("sound_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.PINK_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1, 1));
@@ -28,7 +26,8 @@ public class ModVillagers {
                     holder -> holder.get() == SOUND_POI.get(), holder -> holder.get() == SOUND_POI.get(),
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
 
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     public static void register(IEventBus eventBus){
         POI_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);

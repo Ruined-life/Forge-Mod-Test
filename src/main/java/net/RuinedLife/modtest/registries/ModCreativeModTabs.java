@@ -13,11 +13,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modtest.MOD_ID);
-
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.crystal_a.get()))
-                    .title(Component.translatable("creativetab.tutorial_tab"))
-                    .displayItems((pParameters, pOutput) -> {
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.crystal_a.get())).title(Component.translatable("creativetab.tutorial_tab")).displayItems((pParameters, pOutput) -> {
                         //INGREDIENT ITEMS
                         pOutput.accept(ModItems.crystal_a.get());
                         pOutput.accept(ModItems.crystal_b.get());
@@ -150,7 +147,8 @@ public class ModCreativeModTabs {
 
 
 
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

@@ -2,43 +2,43 @@
   "sound_friend_activated": {
     "subtitles": "sounds.modtest.sound_friend_activated",
     "sounds": [
-      "modtest:sound_friend_activated"
+      "modtest:item_sounds/friend/sound_friend_activated"
     ]
   },
   "sound_block_break": {
     "subtitles": "sounds.modtest.sound_block_break",
     "sounds": [
-      "modtest:sound_block_break"
+      "modtest:block_sounds/pink_block/sound_block_break"
     ]
   },
   "sound_block_fall": {
     "subtitles": "sounds.modtest.sound_block_fall",
     "sounds": [
-      "modtest:sound_block_fall"
+      "modtest:block_sounds/pink_block/sound_block_fall"
     ]
   },
   "sound_block_hit": {
     "subtitles": "sounds.modtest.sound_block_hit",
     "sounds": [
-      "modtest:sound_block_hit"
+      "modtest:block_sounds/pink_block/sound_block_hit"
     ]
   },
   "sound_block_place": {
     "subtitles": "sounds.modtest.sound_block_place",
     "sounds": [
-      "modtest:sound_block_place"
+      "modtest:block_sounds/pink_block/sound_block_place"
     ]
   },
   "sound_block_step": {
     "subtitles": "sounds.modtest.sound_block_step",
     "sounds": [
-      "modtest:sound_block_step"
+      "modtest:block_sounds/pink_block/sound_block_step"
     ]
   },
   "temporary": {
     "sounds": [
       {
-        "name": "modtest:temporary",
+        "name": "modtest:music_discs/temporary",
         "stream": true
       }
     ]
@@ -46,7 +46,7 @@
   "black_knife": {
     "sounds": [
       {
-        "name": "modtest:black_knife",
+        "name": "modtest:music_discs/black_knife",
         "stream": true
       }
     ]
@@ -54,7 +54,7 @@
   "erika": {
     "sounds": [
       {
-        "name": "modtest:erika",
+        "name": "modtest:music_discs/erika",
         "stream": true
       }
     ]

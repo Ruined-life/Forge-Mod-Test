@@ -20,7 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, modtest.MOD_ID, exFileHelper);
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     @Override
     protected void registerStatesAndModels() {
         //PUT ALL YOUR BLOCKS HERE
@@ -41,85 +41,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock)ModBlocks.DARKNESS_FENCE_GATE.get()), blockTexture(ModBlocks.DARKNESS_BLOCK.get()));
         wallBlock(((WallBlock)ModBlocks.DARKNESS_WALL.get()), blockTexture(ModBlocks.DARKNESS_BLOCK.get()));
 
-        simpleBlockWithItem(ModBlocks.GEM_POLISHING_STATION.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/gem_polishing_station")));
+        simpleBlockWithItem(ModBlocks.GEM_POLISHING_STATION.get(), new ModelFile.UncheckedModelFile(modLoc("block/gem_polishing_station")));
 
-        doorBlockWithRenderType(
-                (DoorBlock) ModBlocks.DARKNESS_DOOR.get(),
-                modLoc("block/darkness_door_bottom"),
-                modLoc("block/darkness_door_top"),
-                "cutout"
-        );
+        doorBlockWithRenderType((DoorBlock) ModBlocks.DARKNESS_DOOR.get(), modLoc("block/darkness_door_bottom"), modLoc("block/darkness_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.DARKNESS_TRAP_DOOR.get()), modLoc("block/darkness_trap_door"), true, "cutout");
-
 
         makeKiwiCrop((CropBlock) ModBlocks.KIWI_CROP.get(), "kiwi_stage", "kiwi_stage_");
 
-
         //AQUA
-        simpleBlockWithItem(ModBlocks.AQUA.get(), models().cross(blockTexture(ModBlocks.AQUA.get()).getPath(),
-                blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_AQUA.get(), models().singleTexture("potted_aqua", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.AQUA.get(), models().cross(blockTexture(ModBlocks.AQUA.get()).getPath(), blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_AQUA.get(), models().singleTexture("potted_aqua", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.AQUA.get())).renderType("cutout"));
 
         //GREEN
-        simpleBlockWithItem(ModBlocks.GREEN.get(), models().cross(blockTexture(ModBlocks.GREEN.get()).getPath(),
-                blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_GREEN.get(), models().singleTexture("potted_green", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.GREEN.get(), models().cross(blockTexture(ModBlocks.GREEN.get()).getPath(), blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_GREEN.get(), models().singleTexture("potted_green", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.GREEN.get())).renderType("cutout"));
 
         //PURPLE
-        simpleBlockWithItem(ModBlocks.PURPLE.get(), models().cross(blockTexture(ModBlocks.PURPLE.get()).getPath(),
-                blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_PURPLE.get(), models().singleTexture("potted_purple", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.PURPLE.get(), models().cross(blockTexture(ModBlocks.PURPLE.get()).getPath(), blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PURPLE.get(), models().singleTexture("potted_purple", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.PURPLE.get())).renderType("cutout"));
 
         //GOLD
-        simpleBlockWithItem(ModBlocks.GOLD.get(), models().cross(blockTexture(ModBlocks.GOLD.get()).getPath(),
-                blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_GOLD.get(), models().singleTexture("potted_gold", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.GOLD.get(), models().cross(blockTexture(ModBlocks.GOLD.get()).getPath(), blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_GOLD.get(), models().singleTexture("potted_gold", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.GOLD.get())).renderType("cutout"));
 
         //YELLOW
-        simpleBlockWithItem(ModBlocks.YELLOW.get(), models().cross(blockTexture(ModBlocks.YELLOW.get()).getPath(),
-                blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_YELLOW.get(), models().singleTexture("potted_yellow", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.YELLOW.get(), models().cross(blockTexture(ModBlocks.YELLOW.get()).getPath(), blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_YELLOW.get(), models().singleTexture("potted_yellow", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.YELLOW.get())).renderType("cutout"));
 
         //ORANGE
-        simpleBlockWithItem(ModBlocks.ORANGE.get(), models().cross(blockTexture(ModBlocks.ORANGE.get()).getPath(),
-                blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_ORANGE.get(), models().singleTexture("potted_orange", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.ORANGE.get(), models().cross(blockTexture(ModBlocks.ORANGE.get()).getPath(), blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_ORANGE.get(), models().singleTexture("potted_orange", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.ORANGE.get())).renderType("cutout"));
 
         //BLUE
-        simpleBlockWithItem(ModBlocks.BLUE.get(), models().cross(blockTexture(ModBlocks.BLUE.get()).getPath(),
-                blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_BLUE.get(), models().singleTexture("potted_blue", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.BLUE.get(), models().cross(blockTexture(ModBlocks.BLUE.get()).getPath(), blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BLUE.get(), models().singleTexture("potted_blue", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.BLUE.get())).renderType("cutout"));
 
         //PINK
-        simpleBlockWithItem(ModBlocks.PINK.get(), models().cross(blockTexture(ModBlocks.PINK.get()).getPath(),
-                blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_PINK.get(), models().singleTexture("potted_pink", new ResourceLocation("flower_pot_cross"), "plant",
-                blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.PINK.get(), models().cross(blockTexture(ModBlocks.PINK.get()).getPath(), blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PINK.get(), models().singleTexture("potted_pink", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.PINK.get())).renderType("cutout"));
 
 
-        // 1. Generate Blockstates & Block Models
-        multiLayerLogBlock(
-                (RotatedPillarBlock) ModBlocks.SCARLET_LOG.get(),
-                modLoc("block/scarlet_log_inner"),
-                modLoc("block/scarlet_log_inner_top"),
-                modLoc("block/scarlet_log_outer"),
-                modLoc("block/scarlet_log_outer_top")
-        );
-// 2. Generate ONLY Item Models (pointing to the block models)
+        multiLayerLogBlock((RotatedPillarBlock) ModBlocks.SCARLET_LOG.get(), modLoc("block/scarlet_log_inner"), modLoc("block/scarlet_log_inner_top"), modLoc("block/scarlet_log_outer"), modLoc("block/scarlet_log_outer_top"));
         blockWithItem(ModBlocks.SCARLET_PLANKS);
-        multiLayerLeavesBlock(
-                ModBlocks.SCARLET_LEAVES,
-                modLoc("block/scarlet_leaves_inner"),
-                modLoc("block/scarlet_leaves_outer")
-        );
+        multiLayerLeavesBlock(ModBlocks.SCARLET_LEAVES, modLoc("block/scarlet_leaves_inner"), modLoc("block/scarlet_leaves_outer"));
 
         //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_LOG.get()), blockTexture(ModBlocks.STRIPPED_SCARLET_LOG.get()),
                 //new ResourceLocation(modtest.MOD_ID, "block/new_zealand_block"));
@@ -132,9 +96,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //blockItem(ModBlocks.STRIPPED_SCARLET_WOOD);
 
 
-
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     private void multiLayerLeavesBlock(RegistryObject<Block> block, ResourceLocation innerTexture, ResourceLocation outerTexture) {
         String blockName = ForgeRegistries.BLOCKS.getKey(block.get()).getPath();
 

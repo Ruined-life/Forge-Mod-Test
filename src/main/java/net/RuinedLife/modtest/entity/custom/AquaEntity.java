@@ -14,10 +14,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -63,8 +60,10 @@ public class AquaEntity extends Animal {
         super.tick();
 
         if(this.level().isClientSide()){
-
+            //System.out.println("SPEED: " + this.getSpeed());
             setupAnimationStates();
+
+
 
         }
 
@@ -124,10 +123,10 @@ public class AquaEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2D, true));
+        //this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.01D, true));
 
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.1D));
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 0.1D));
 
         this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 3f));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
@@ -140,7 +139,7 @@ public class AquaEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 100D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.MOVEMENT_SPEED, 1.5D)
+                .add(Attributes.MOVEMENT_SPEED, 0.1D)
                 .add(Attributes.ARMOR_TOUGHNESS, 10f)
                 .add(Attributes.ATTACK_KNOCKBACK, 30f)
                 .add(Attributes.ATTACK_DAMAGE, 40f);
@@ -175,7 +174,9 @@ public class AquaEntity extends Animal {
                 }
                 case PICKUP -> {
                     pPlayer.displayClientMessage(Component.literal("Hehehe, let's go for a ride!").withStyle(ChatFormatting.AQUA), true);
-                    pPlayer.startRiding(this, true);
+                    //this.getJumpControl().jump();
+                    this.carryAnimationState.start(this.tickCount);
+                    //pPlayer.startRiding(this, true);
                     //pPlayer.stopRiding();
                     break;
                 }
@@ -187,6 +188,38 @@ public class AquaEntity extends Animal {
             }
         }
         return InteractionResult.SUCCESS;
+    }
+
+    // 1. Create a distinct animation state
+    public final AnimationState carryAnimationState = new AnimationState();
+
+    // 2. Define custom network IDs (pick numbers not used by vanilla, e.g., 5 and 6)
+    public static final byte START_CARRY_EVENT = 5;
+    public static final byte STOP_CARRY_EVENT = 6;
+
+    // 3. Helper method to trigger the animation from anywhere on the server
+    public void startCarryAnimation() {
+        if (!this.level().isClientSide()) {
+            this.level().broadcastEntityEvent(this, START_CARRY_EVENT);
+        }
+    }
+
+    public void stopCarryAnimation() {
+        if (!this.level().isClientSide()) {
+            this.level().broadcastEntityEvent(this, STOP_CARRY_EVENT);
+        }
+    }
+
+    // 4. Handle the event on the client side
+    @Override
+    public void handleEntityEvent(byte id) {
+        if (id == START_CARRY_EVENT) {
+            this.carryAnimationState.start(this.tickCount);
+        } else if (id == STOP_CARRY_EVENT) {
+            this.carryAnimationState.stop();
+        } else {
+            super.handleEntityEvent(id);
+        }
     }
 
     @Override

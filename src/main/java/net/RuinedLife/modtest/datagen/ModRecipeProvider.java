@@ -21,7 +21,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         //I have nothing to smelt at the moment but heres an example
@@ -40,7 +40,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.crystal_c.get())
                 .unlockedBy(getHasName(ModItems.crystal_a.get()), has(ModItems.crystal_a.get()))
                 .save(pWriter);
-
 
         //PURE C
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEW_ZEALAND_BLOCK.get())
@@ -130,7 +129,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.PIE_NORMAL.get()), has(ModItems.PIE_NORMAL.get()))
                 .save(pWriter);
 
-
         //ORANGE PIE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_ORANGE.get())
                 .pattern("BBB")
@@ -208,7 +206,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }

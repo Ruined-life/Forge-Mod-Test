@@ -13,11 +13,12 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, modtest.MOD_ID);
+    /*---------------------------------------------------------------------------------------------------------------------------*/
 
-    public static final RegistryObject<MenuType<GemPolishingStationMenu>> GEM_POLISHING_MENU =
-            registerMenuType("gem_polishing_menu", GemPolishingStationMenu::new);
+    public static final RegistryObject<MenuType<GemPolishingStationMenu>> GEM_POLISHING_MENU = registerMenuType("gem_polishing_menu", GemPolishingStationMenu::new);
 
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }

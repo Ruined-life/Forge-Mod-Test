@@ -31,7 +31,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     public ModBlockLootTables() {
         super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags());
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.DARKNESS_BLOCK.get());
@@ -49,7 +49,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.SCARLET_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.NEW_ZEALAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); //TODO: Change to sapling
-
 
         //STAIRS, FENCES, FENCE GATES, SLABS, DOORS, TRAP DOORS
         this.dropSelf(ModBlocks.DARKNESS_STAIRS.get());
@@ -100,7 +99,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //this.add(ModBlocks.SAPHHIRE_ORE.get(),
         // block -> createCopperLikeOreDrops(ModBlocks.SAPHHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
     }
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item){
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,

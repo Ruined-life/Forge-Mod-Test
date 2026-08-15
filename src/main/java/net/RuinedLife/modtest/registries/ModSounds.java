@@ -12,8 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, modtest.MOD_ID);
-
-
+    /*---------------------------------------------------------------------------------------------------------------------------*/
     //ITEM SOUNDS
     public static final RegistryObject<SoundEvent> FRIEND_ACTIVATED = registerSoundEvents("sound_friend_activated");
 
@@ -29,13 +28,13 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> BLACK_KNIFE = registerSoundEvents("black_knife");
     public static final RegistryObject<SoundEvent> ERIKA = registerSoundEvents("erika");
 
-
     //MOB SOUNDS
     public static final RegistryObject<SoundEvent> AQUA_AMBIENT = SOUND_EVENTS.register("aqua_ambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_ambient")));
     public static final RegistryObject<SoundEvent> AQUA_DEATH = SOUND_EVENTS.register("aqua_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_death")));
-
     public static final RegistryObject<SoundEvent> GOKU_ANGRY = registerSoundEvents("goku_angry");
 
+    /*---------------------------------------------------------------------------------------------------------------------------*/
+    /*METHODS*/
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);

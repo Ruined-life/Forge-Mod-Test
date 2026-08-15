@@ -28,53 +28,28 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         //So were adding what blocks need an iron tool here instead of manually
         //writing it in a json file
         //WHAT TIER IT NEEDS TO BREAK
-        this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(ModTags.Blocks.NEEDS_PINK_TOOL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(ModTags.Blocks.NEEDS_PINK_TOOL).add(ModBlocks.DARKNESS_BLOCK.get());
 
         //TOOLS
-        this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
-        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.DARKNESS_BLOCK.get());
-
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.DARKNESS_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(ModBlocks.DARKNESS_BLOCK.get());
 
         //STAIRS, FENCES, DOORS, TRAP DOORS, FENCE GATES, SLABS
         //MAKE SURE TO ADD THE TAGS FOR FENCES, FENCE GATES AND WALLS OTHERWISE THEY WONT CONNECT
-        this.tag(BlockTags.FENCES)
-                .add(ModBlocks.DARKNESS_FENCE.get());
-        this.tag(BlockTags.FENCE_GATES)
-                .add(ModBlocks.DARKNESS_FENCE_GATE.get());
-        this.tag(BlockTags.WALLS)
-                .add(ModBlocks.DARKNESS_WALL.get());
-
-        this.tag(BlockTags.LOGS_THAT_BURN)
-                .add(ModBlocks.SCARLET_LOG.get());
+        this.tag(BlockTags.FENCES).add(ModBlocks.DARKNESS_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES).add(ModBlocks.DARKNESS_FENCE_GATE.get());
+        this.tag(BlockTags.WALLS).add(ModBlocks.DARKNESS_WALL.get());
+        this.tag(BlockTags.LOGS_THAT_BURN).add(ModBlocks.SCARLET_LOG.get());
                 //.add(ModBlocks.SCARLET_WOOD.get());
                 //.add(ModBlocks.STRIPPED_SCARLET_LOG.get())
                 //.add(ModBlocks.STRIPPED_SCARLET_WOOD.get());
-
-        this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.SCARLET_PLANKS.get());
+        this.tag(BlockTags.PLANKS).add(ModBlocks.SCARLET_PLANKS.get());
 
     }
 }

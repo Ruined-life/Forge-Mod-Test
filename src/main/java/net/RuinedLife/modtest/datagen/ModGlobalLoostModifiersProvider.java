@@ -19,15 +19,9 @@ public class ModGlobalLoostModifiersProvider extends GlobalLootModifierProvider 
 
     @Override
     protected void start() {
-        add("kiwi_fruit_from_grass", new AddItemModifier(new LootItemCondition[] {
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.kiwi_fruit.get()));
-
-        add("erika_from_creeper", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()}, ModItems.ERIKA_MUSIC_DISC.get()));
-
-        add("erika_from_village_chests", new AddItemModifier(new LootItemCondition[] {
-                        new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build()}, ModItems.ERIKA_MUSIC_DISC.get()));
+        add("kiwi_fruit_from_grass", new AddItemModifier(new LootItemCondition[] {LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(), LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.kiwi_fruit.get()));
+        add("erika_from_creeper", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()}, ModItems.ERIKA_MUSIC_DISC.get()));
+        add("erika_from_village_chests", new AddItemModifier(new LootItemCondition[] {new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build()}, ModItems.ERIKA_MUSIC_DISC.get()));
 
     }
 }
