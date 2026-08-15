@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:flower_forest"
+  ],
+  "spawners": {
+    "type": "modtest:aqua",
+    "weight": 80,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

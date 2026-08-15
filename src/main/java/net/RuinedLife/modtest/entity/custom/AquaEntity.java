@@ -176,7 +176,7 @@ public class AquaEntity extends Animal {
                 case PICKUP -> {
                     pPlayer.displayClientMessage(Component.literal("Hehehe, let's go for a ride!").withStyle(ChatFormatting.AQUA), true);
                     pPlayer.startRiding(this, true);
-                    pPlayer.stopRiding();
+                    //pPlayer.stopRiding();
                     break;
                 }
 
