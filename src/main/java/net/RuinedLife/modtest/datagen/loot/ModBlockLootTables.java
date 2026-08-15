@@ -39,6 +39,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.NAZI_BLOCK.get());
         this.dropSelf(ModBlocks.NEW_ZEALAND_BLOCK.get());
         this.dropSelf(ModBlocks.DUST_BLOCK.get());
+        this.dropSelf(ModBlocks.GEM_POLISHING_STATION.get());
 
         this.dropSelf(ModBlocks.SCARLET_LOG.get());
         //this.dropSelf(ModBlocks.SCARLET_WOOD.get());

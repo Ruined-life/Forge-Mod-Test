@@ -1,6 +1,7 @@
 package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
+import net.RuinedLife.modtest.block.entity.ModBlockEntities;
 import net.RuinedLife.modtest.entity.client.renderers.AquaRenderer;
 import net.RuinedLife.modtest.entity.client.renderers.GokuRenderer;
 import net.RuinedLife.modtest.registries.ModEntities;
@@ -11,6 +12,9 @@ import net.RuinedLife.modtest.registries.ModBlocks;
 import net.RuinedLife.modtest.registries.ModLootModifiers;
 import net.RuinedLife.modtest.registries.ModSounds;
 import net.RuinedLife.modtest.registries.ModVillagers;
+import net.RuinedLife.modtest.screen.GemPolishingStationScreen;
+import net.RuinedLife.modtest.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -46,6 +50,8 @@ public class modtest {
 
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -96,6 +102,8 @@ public class modtest {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.AQUA.get(), AquaRenderer::new);
             EntityRenderers.register(ModEntities.GOKU.get(), GokuRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
 
         }
     }

@@ -108,6 +108,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.DARKNESS_DOOR.get());
                         pOutput.accept(ModBlocks.DARKNESS_TRAP_DOOR.get());
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
 
                         //WOOD
                         pOutput.accept(ModBlocks.SCARLET_LOG.get());

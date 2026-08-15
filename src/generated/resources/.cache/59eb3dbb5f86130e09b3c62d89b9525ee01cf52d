@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-12T16:51:19.537831041	Loot Tables
+// 1.20.1	2026-08-15T14:26:39.378310402	Loot Tables
 d1858e88cae5efaf16d24c58193b83708c282830 data/modtest/loot_tables/blocks/aqua.json
 3c9560205429f366603e5332d1f6c549bcc60c33 data/modtest/loot_tables/blocks/blue.json
 a0826c134add3dd38b0144990bfa8b6c4b04c8bf data/modtest/loot_tables/blocks/darkness_block.json
@@ -12,6 +12,7 @@ ae7529624b8d668a95ac8ed5dda5804f2a225792 data/modtest/loot_tables/blocks/darknes
 28b9fc9367afe080729f288b98b3a6de8889cb24 data/modtest/loot_tables/blocks/darkness_trap_door.json
 d5d6dee980d7d08c8fb320fa5a4c5e8d3139ee6b data/modtest/loot_tables/blocks/darkness_wall.json
 00171898e8b67c6b3adb3db596e4c646ea76eacd data/modtest/loot_tables/blocks/dust_block.json
+a74b596c5b533e4651f4a0839a7af8bf5f7d07c1 data/modtest/loot_tables/blocks/gem_polishing_station.json
 29c6c55ab8334786c64c735bb195efb6e5b12261 data/modtest/loot_tables/blocks/gold.json
 a65b6a804d67ed3cda6c52d7ce62ee185047a753 data/modtest/loot_tables/blocks/green.json
 7da5e4deed48a34654dda71eaef6f5bb0f4733bf data/modtest/loot_tables/blocks/kiwi_crop.json

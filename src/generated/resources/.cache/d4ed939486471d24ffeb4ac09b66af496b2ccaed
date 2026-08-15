@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-12T16:54:27.958132823	Block States: modtest
+// 1.20.1	2026-08-15T14:26:39.377050724	Block States: modtest
 779d5cc8bcf54c711185c945b1c1ac7e38526374 assets/modtest/blockstates/aqua.json
 1cc8c8def11bfe0fd3badb79712fdeee41ef993b assets/modtest/blockstates/blue.json
 96acdd379ca5e4abb47e2114cd87dd457114b92d assets/modtest/blockstates/darkness_block.json
@@ -12,6 +12,7 @@ ce0e4799edf4de5eef62238ae096c67db5175119 assets/modtest/blockstates/darkness_sta
 e157d484a39ad7eeab8df2b0c32c7aa18a8ae71f assets/modtest/blockstates/darkness_trap_door.json
 904fa5d04bf3e86fbc493f1b5081f5ffb76b4dc9 assets/modtest/blockstates/darkness_wall.json
 04e6566060636bcf5a6e2c556d7c9919cc6908de assets/modtest/blockstates/dust_block.json
+74b8f78d96ce2185636fec155b3659d58890bc59 assets/modtest/blockstates/gem_polishing_station.json
 b2ece79bc2f2e2a2af54b29eec4edf22f1ff4a26 assets/modtest/blockstates/gold.json
 efa488e082c48a18ac5641e304f6c5403dc19de2 assets/modtest/blockstates/green.json
 ba70d647b5f657b376870511d8bf5657700ef37e assets/modtest/blockstates/kiwi_crop.json
@@ -94,6 +95,7 @@ e5755e495ed348918c07d9896f0d924a3367dcf0 assets/modtest/models/item/aqua.json
 45d0f8d2b99e947f2a316998c32812316b9317bd assets/modtest/models/item/blue.json
 a649b809247cb067c59fa74ede72633d52feb9ea assets/modtest/models/item/darkness_block.json
 502485135131310a2ef67493b03d1411b87eb414 assets/modtest/models/item/dust_block.json
+b18ce8118051abfaffedbae6203988900fa7901c assets/modtest/models/item/gem_polishing_station.json
 9fca3d853a61b4eb2291a6f9c7688dab674cdba8 assets/modtest/models/item/gold.json
 cf71a985cb085bc57027b300854791c81054297a assets/modtest/models/item/green.json
 8586880869062fcd774b3c240df91c1cbe5fd622 assets/modtest/models/item/nazi_block.json

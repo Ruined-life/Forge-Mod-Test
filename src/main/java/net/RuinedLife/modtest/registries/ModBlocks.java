@@ -1,6 +1,7 @@
 package net.RuinedLife.modtest.registries;
 
 import net.RuinedLife.modtest.block.custom.FlammableRotatedPillarBlock;
+import net.RuinedLife.modtest.block.custom.GemPolishingStationBlock;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
 import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
@@ -207,6 +208,9 @@ public class ModBlocks {
                 }
             });
 
+
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

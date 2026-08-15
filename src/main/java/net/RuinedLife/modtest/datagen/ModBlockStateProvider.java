@@ -41,6 +41,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock)ModBlocks.DARKNESS_FENCE_GATE.get()), blockTexture(ModBlocks.DARKNESS_BLOCK.get()));
         wallBlock(((WallBlock)ModBlocks.DARKNESS_WALL.get()), blockTexture(ModBlocks.DARKNESS_BLOCK.get()));
 
+        simpleBlockWithItem(ModBlocks.GEM_POLISHING_STATION.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/gem_polishing_station")));
+
         doorBlockWithRenderType(
                 (DoorBlock) ModBlocks.DARKNESS_DOOR.get(),
                 modLoc("block/darkness_door_bottom"),
