@@ -2,6 +2,7 @@ package net.RuinedLife.modtest;
 
 import com.mojang.logging.LogUtils;
 import net.RuinedLife.modtest.entity.client.renderers.AquaRenderer;
+import net.RuinedLife.modtest.entity.client.renderers.GokuRenderer;
 import net.RuinedLife.modtest.registries.ModEntities;
 import net.RuinedLife.modtest.entity.client.renderers.RhinoRenderer;
 import net.RuinedLife.modtest.registries.ModCreativeModTabs;
@@ -94,6 +95,7 @@ public class modtest {
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.AQUA.get(), AquaRenderer::new);
+            EntityRenderers.register(ModEntities.GOKU.get(), GokuRenderer::new);
 
         }
     }

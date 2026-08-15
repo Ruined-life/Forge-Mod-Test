@@ -3,6 +3,7 @@ package net.RuinedLife.modtest.event;
 
 import net.RuinedLife.modtest.entity.client.ModModelLayers;
 import net.RuinedLife.modtest.entity.client.models.AquaModel;
+import net.RuinedLife.modtest.entity.client.models.GokuModel;
 import net.RuinedLife.modtest.entity.client.models.RhinoModel;
 import net.RuinedLife.modtest.modtest;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,6 +18,7 @@ public class ModEventBusClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.AQUA_LAYER, AquaModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.GOKU_LAYER, GokuModel::createBodyLayer);
     }
 
 }

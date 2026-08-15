@@ -34,7 +34,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> AQUA_AMBIENT = SOUND_EVENTS.register("aqua_ambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_ambient")));
     public static final RegistryObject<SoundEvent> AQUA_DEATH = SOUND_EVENTS.register("aqua_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_death")));
 
-
+    public static final RegistryObject<SoundEvent> GOKU_ANGRY = registerSoundEvents("goku_angry");
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,

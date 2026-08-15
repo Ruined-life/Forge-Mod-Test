@@ -21,7 +21,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<AquaEntity>> AQUA =
             ENTITY_TYPES.register("aqua", () -> EntityType.Builder.of(AquaEntity::new, MobCategory.CREATURE)
-                    .sized(0.5f, 0.5f).build("aqua"));
+                    .sized(1.25f, 1.25f).build("aqua"));
 
     public static final RegistryObject<EntityType<GokuEntity>> GOKU =
             ENTITY_TYPES.register("goku", () -> EntityType.Builder.of(GokuEntity::new, MobCategory.CREATURE)

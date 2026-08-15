@@ -12,4 +12,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation AQUA_LAYER = new ModelLayerLocation(
             new ResourceLocation(modtest.MOD_ID, "aqua_layer"), "main");
 
+    public static final ModelLayerLocation GOKU_LAYER = new ModelLayerLocation(
+            new ResourceLocation(modtest.MOD_ID, "goku_layer"), "main");
+
 }

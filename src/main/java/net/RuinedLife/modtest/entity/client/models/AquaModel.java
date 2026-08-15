@@ -6,7 +6,6 @@ package net.RuinedLife.modtest.entity.client.models;// Made with Blockbench 5.1.
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -14,6 +13,7 @@ import net.minecraft.world.entity.Entity;
 
 public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
+
 	private final ModelPart root;
 	private final ModelPart head;
 	private final ModelPart scarf;
@@ -77,7 +77,7 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 43).addBox(-6.0F, -19.0F, -6.0F, 12.0F, 12.0F, 12.0F, new CubeDeformation(0.0F))
-		.texOffs(54, 98).addBox(-2.0F, -7.0F, -2.0F, 4.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 8.0F, 0.0F));
+		.texOffs(54, 98).addBox(-2.0F, -7.0F, -2.0F, 4.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 2.0F, 0.0F));
 
 		PartDefinition scarf = head.addOrReplaceChild("scarf", CubeListBuilder.create().texOffs(0, 67).addBox(-5.0F, -2.0F, -4.0F, 9.0F, 2.0F, 8.0F, new CubeDeformation(0.0F))
 		.texOffs(52, 35).addBox(-4.0F, -3.0F, -3.0F, 5.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
@@ -87,7 +87,7 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 		.texOffs(64, 17).addBox(1.0F, -3.0F, -3.0F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(26, 77).addBox(4.0F, -1.0F, -4.0F, 1.0F, 1.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -3.0F, 0.0F));
 
-		PartDefinition hair = partdefinition.addOrReplaceChild("hair", CubeListBuilder.create(), PartPose.offset(0.0F, 3.0F, 0.0F));
+		PartDefinition hair = partdefinition.addOrReplaceChild("hair", CubeListBuilder.create(), PartPose.offset(0.0F, -3.0F, 0.0F));
 
 		PartDefinition bangs = hair.addOrReplaceChild("bangs", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
@@ -153,13 +153,13 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 		.texOffs(18, 90).addBox(0.0F, -23.0F, 1.0F, 1.0F, 5.0F, 3.0F, new CubeDeformation(0.0F))
 		.texOffs(54, 104).addBox(0.0F, -23.0F, -4.0F, 1.0F, 5.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(2.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.1745F));
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(58, 0).addBox(0.0F, 6.0F, -12.0F, 8.0F, 7.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(-4.0F, -1.0F, 7.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(58, 0).addBox(0.0F, 6.0F, -12.0F, 8.0F, 7.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(-4.0F, -7.0F, 7.0F));
 
 		PartDefinition bottom_clothing = body.addOrReplaceChild("bottom_clothing", CubeListBuilder.create().texOffs(52, 19).addBox(-5.0F, -3.0F, -6.0F, 10.0F, 4.0F, 12.0F, new CubeDeformation(0.0F))
 		.texOffs(48, 43).addBox(-6.0F, 1.0F, -7.0F, 11.0F, 4.0F, 14.0F, new CubeDeformation(0.0F))
 		.texOffs(0, 0).addBox(-7.0F, 5.0F, -8.0F, 13.0F, 3.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(4.0F, 16.0F, -7.0F));
 
-		PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 10.0F, -7.0F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 4.0F, -7.0F, -0.3927F, 0.0F, 0.0F));
 
 		PartDefinition wrist_right_r1 = right_arm.addOrReplaceChild("wrist_right_r1", CubeListBuilder.create().texOffs(26, 86).addBox(-5.0F, -4.0F, 0.0F, 9.0F, 9.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 11.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
 
@@ -167,7 +167,7 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 
 		PartDefinition upper_arm_right_r1 = right_arm.addOrReplaceChild("upper_arm_right_r1", CubeListBuilder.create().texOffs(80, 74).addBox(-3.0F, -2.0F, -2.0F, 5.0F, 5.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
 
-		PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 10.0F, 7.0F, 0.3927F, 0.0F, 0.0F));
+		PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 4.0F, 7.0F, 0.3927F, 0.0F, 0.0F));
 
 		PartDefinition wrist_left_right_r1 = left_arm.addOrReplaceChild("wrist_left_right_r1", CubeListBuilder.create().texOffs(74, 86).addBox(-5.0F, -4.0F, -3.0F, 9.0F, 9.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 11.0F, 0.0F, -1.5708F, 0.0F, 0.0F));
 
@@ -176,13 +176,13 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition upper_left_arm_right_r1 = left_arm.addOrReplaceChild("upper_left_arm_right_r1", CubeListBuilder.create().texOffs(50, 86).addBox(-3.0F, -2.0F, -5.0F, 5.0F, 5.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, 0.0F));
 
 		PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(96, 15).addBox(-2.0F, -1.0F, -4.0F, 5.0F, 7.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(102, 96).addBox(3.0F, 4.0F, -4.0F, 1.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 24.0F, -2.0F));
+		.texOffs(102, 96).addBox(3.0F, 4.0F, -4.0F, 1.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 18.0F, -2.0F));
 
 		PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(96, 27).addBox(-2.0F, -1.0F, -4.0F, 5.0F, 7.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(102, 103).addBox(3.0F, 4.0F, -4.0F, 1.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 24.0F, 5.0F));
+		.texOffs(102, 103).addBox(3.0F, 4.0F, -4.0F, 1.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 18.0F, 5.0F));
 
-		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(18, 110).addBox(7.0F, -27.0F, -7.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(24, 110).addBox(7.0F, -27.0F, 4.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(18, 110).addBox(7.0F, -33.0F, -7.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
+		.texOffs(24, 110).addBox(7.0F, -33.0F, 4.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
@@ -190,11 +190,6 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
-	}
-
-	@Override
-	public ModelPart root() {
-		return this.root;
 	}
 
 //	@Override
@@ -208,4 +203,9 @@ public class AquaModel<T extends Entity> extends HierarchicalModel<T> {
 //		left_leg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 //		bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 //	}
+
+	@Override
+	public ModelPart root() {
+		return this.root;
+	}
 }

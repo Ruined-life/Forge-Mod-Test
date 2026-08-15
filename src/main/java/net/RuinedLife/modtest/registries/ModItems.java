@@ -161,6 +161,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.AQUA, 0x55ffff, 0xff0000,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> GOKU_SPAWN_EGG = ITEMS.register("goku_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.GOKU, 0x55ffff, 0xff0000,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
