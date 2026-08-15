@@ -33,6 +33,7 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
         simpleItem(ItemsRegistry.crystal_d);
         simpleItem(ItemsRegistry.crystal_e);
         simpleItem(ItemsRegistry.pure_crystal);
+        simpleItem(ItemsRegistry.DICE_ITEM);
         simpleItem(ItemsRegistry.kiwi_fruit);
         simpleItem(ItemsRegistry.kiwi_seeds);
         simpleItem(ItemsRegistry.FRIEND);

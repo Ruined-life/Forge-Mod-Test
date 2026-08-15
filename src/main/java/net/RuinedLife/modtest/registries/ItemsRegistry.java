@@ -33,6 +33,10 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> crystal_e = ITEMS.register("crystal_e", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> pure_crystal = ITEMS.register("pure_crystal", () -> new Item(new Item.Properties()));
 
+    //PROJECTILES
+    public static final RegistryObject<Item> DICE_ITEM = ITEMS.register("dice_item", () -> new DiceProjectile(new Item.Properties()));
+
+
     //FLOWER ITEMS
     public static final RegistryObject<Item> TOY_KNIFE = ITEMS.register("toy_knife", () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.toy_knife", ChatFormatting.AQUA));
     public static final RegistryObject<Item> RIBBON = ITEMS.register("ribbon", () -> new TooltipItem(new Item.Properties(), "tooltip.modtest.ribbon", ChatFormatting.RED));

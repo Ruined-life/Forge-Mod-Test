@@ -1,6 +1,7 @@
 package net.RuinedLife.modtest.registries;
 
 import net.RuinedLife.modtest.entity.custom.AquaEntity;
+import net.RuinedLife.modtest.entity.custom.DiceProjectileEntity;
 import net.RuinedLife.modtest.entity.custom.GokuEntity;
 import net.RuinedLife.modtest.entity.custom.RhinoEntity;
 import net.RuinedLife.modtest.modtest;
@@ -18,6 +19,7 @@ public class EntityRegistry {
     public static final RegistryObject<EntityType<RhinoEntity>> RHINO = ENTITY_TYPES.register("rhino", () -> EntityType.Builder.of(RhinoEntity::new, MobCategory.CREATURE).sized(2.5f, 2.5f).build("rhino"));
     public static final RegistryObject<EntityType<AquaEntity>> AQUA = ENTITY_TYPES.register("aqua", () -> EntityType.Builder.of(AquaEntity::new, MobCategory.CREATURE).sized(1.25f, 1.25f).build("aqua"));
     public static final RegistryObject<EntityType<GokuEntity>> GOKU = ENTITY_TYPES.register("goku", () -> EntityType.Builder.of(GokuEntity::new, MobCategory.CREATURE).sized(1f, 1f).build("goku"));
+    public static final RegistryObject<EntityType<DiceProjectileEntity>> DICE_PROJECTILE = ENTITY_TYPES.register("dice_projectile", () -> EntityType.Builder.<DiceProjectileEntity>of(DiceProjectileEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("dice_projectile"));
 
     /*---------------------------------------------------------------------------------------------------------------------------*/
     public static void register(IEventBus eventBus){

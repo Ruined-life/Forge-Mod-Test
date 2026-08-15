@@ -24,6 +24,8 @@ public class CreativeModeTabsRegistry {
                         pOutput.accept(ItemsRegistry.pure_crystal.get());
 
 
+                        pOutput.accept(ItemsRegistry.DICE_ITEM.get());
+
                         //TOOLS
                         pOutput.accept(ItemsRegistry.AOE_PICKAXE.get());
                         pOutput.accept(ItemsRegistry.CHEST_SCANNER.get());

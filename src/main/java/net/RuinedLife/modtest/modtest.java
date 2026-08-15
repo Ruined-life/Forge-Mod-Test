@@ -16,6 +16,7 @@ import net.RuinedLife.modtest.screen.GemPolishingStationScreen;
 import net.RuinedLife.modtest.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -99,7 +100,10 @@ public class modtest {
             EntityRenderers.register(EntityRegistry.AQUA.get(), AquaRenderer::new);
             EntityRenderers.register(EntityRegistry.GOKU.get(), GokuRenderer::new);
 
+            EntityRenderers.register(EntityRegistry.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
+
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
+
 
         }
     }
