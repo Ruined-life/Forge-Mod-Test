@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-15T14:26:39.378310402	Loot Tables
+// 1.20.1	2026-08-16T20:14:03.989526407	Loot Tables
 d1858e88cae5efaf16d24c58193b83708c282830 data/modtest/loot_tables/blocks/aqua.json
 3c9560205429f366603e5332d1f6c549bcc60c33 data/modtest/loot_tables/blocks/blue.json
 a0826c134add3dd38b0144990bfa8b6c4b04c8bf data/modtest/loot_tables/blocks/darkness_block.json
@@ -16,7 +16,6 @@ a74b596c5b533e4651f4a0839a7af8bf5f7d07c1 data/modtest/loot_tables/blocks/gem_pol
 29c6c55ab8334786c64c735bb195efb6e5b12261 data/modtest/loot_tables/blocks/gold.json
 a65b6a804d67ed3cda6c52d7ce62ee185047a753 data/modtest/loot_tables/blocks/green.json
 7da5e4deed48a34654dda71eaef6f5bb0f4733bf data/modtest/loot_tables/blocks/kiwi_crop.json
-e8cc0bc9867e923270bf0110193e1202a144ea2c data/modtest/loot_tables/blocks/nazi_block.json
 61037994df662ff933a72cda27d027a6887c5b67 data/modtest/loot_tables/blocks/new_zealand_block.json
 f7bf387f99469134fce6a5f0659b0742831da100 data/modtest/loot_tables/blocks/orange.json
 7b4a735c522d2ee3251ecf60189b192fc0907316 data/modtest/loot_tables/blocks/pink.json

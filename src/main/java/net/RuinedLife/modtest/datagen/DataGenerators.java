@@ -33,7 +33,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new GlobalLootModifiersProvider(packOutput));
         generator.addProvider(event.includeServer(), new PoiTypeTagsProvider(packOutput, lookupProvider, existingFileHelper));
 
-
+        generator.addProvider(event.includeServer(), new WorldGenProvider(packOutput, lookupProvider));
     }
 
 }
