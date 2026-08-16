@@ -6,11 +6,29 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.2.0'
 }
 
-version = mod_version
-group = mod_group_id
+version = project.mod_version
+group = project.mod_group_id
 
 base {
-    archivesName = mod_id
+    archivesName = project.mod_id
+}
+
+tasks.named('processResources', ProcessResources.class).configure {
+    var replaceProperties = [
+            'minecraft_version': minecraft_version,
+            'mod_version'      : mod_version,
+            'mod_id'           : mod_id,
+            'mod_name'         : mod_name,
+            'mod_license'      : mod_license,
+            'mod_authors'      : mod_authors,
+            'mod_description'  : mod_description
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching('META-INF/mods.toml') {
+        expand replaceProperties
+    }
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.

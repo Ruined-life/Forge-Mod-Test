@@ -14,6 +14,7 @@ import net.RuinedLife.modtest.registries.SoundsRegistry;
 import net.RuinedLife.modtest.registries.VillagersRegistry;
 import net.RuinedLife.modtest.screen.GemPolishingStationScreen;
 import net.RuinedLife.modtest.screen.ModMenuTypes;
+import net.RuinedLife.modtest.worldgen.tree.TrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -50,6 +51,7 @@ public class modtest {
         EntityRegistry.register(modEventBus);
         BlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        TrunkPlacerTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

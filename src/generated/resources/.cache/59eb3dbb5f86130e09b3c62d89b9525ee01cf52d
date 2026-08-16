@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-16T20:14:03.989526407	Loot Tables
+// 1.20.1	2026-08-16T20:40:05.799594605	Loot Tables
 d1858e88cae5efaf16d24c58193b83708c282830 data/modtest/loot_tables/blocks/aqua.json
 3c9560205429f366603e5332d1f6c549bcc60c33 data/modtest/loot_tables/blocks/blue.json
 a0826c134add3dd38b0144990bfa8b6c4b04c8bf data/modtest/loot_tables/blocks/darkness_block.json
@@ -29,7 +29,8 @@ bd93183eafa7d6600f65700cd4b744bfcb602470 data/modtest/loot_tables/blocks/potted_
 d1e240e59476882507dcf43851192eddfe8f452c data/modtest/loot_tables/blocks/potted_purple.json
 fed8dac9d74f9304c324e75ee6ccabab3ebb45f0 data/modtest/loot_tables/blocks/potted_yellow.json
 fa7ba86b2ae657c18f6ab72394246840d0df33f2 data/modtest/loot_tables/blocks/purple.json
-33875308783c309300f4446db10607022d833c11 data/modtest/loot_tables/blocks/scarlet_leaves.json
+65313b8b41de8dad1b5a715b53afd68e45fb35f8 data/modtest/loot_tables/blocks/scarlet_leaves.json
 41d98ace61703d2630ac744a787f3e4eda77b4c3 data/modtest/loot_tables/blocks/scarlet_log.json
 38a6f66abaee667c8e06b6e5340e43d34d7d4602 data/modtest/loot_tables/blocks/scarlet_planks.json
+276abd5b12708deca6cf4806296a50a709f22603 data/modtest/loot_tables/blocks/scarlet_sapling.json
 7d1bb3bd7467dcd958b9da6fd0c60d73c48ca2bd data/modtest/loot_tables/blocks/yellow.json

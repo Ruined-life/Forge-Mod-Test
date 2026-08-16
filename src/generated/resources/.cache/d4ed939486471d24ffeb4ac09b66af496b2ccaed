@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-16T20:14:03.988184975	Block States: modtest
+// 1.20.1	2026-08-16T20:40:05.798468682	Block States: modtest
 779d5cc8bcf54c711185c945b1c1ac7e38526374 assets/modtest/blockstates/aqua.json
 1cc8c8def11bfe0fd3badb79712fdeee41ef993b assets/modtest/blockstates/blue.json
 96acdd379ca5e4abb47e2114cd87dd457114b92d assets/modtest/blockstates/darkness_block.json
@@ -32,6 +32,7 @@ d2acf1901c315152f4d29f40643cd75a0ddaed37 assets/modtest/blockstates/potted_purpl
 8c1186c85a3898db77648bbd3fc81ffca02b55f2 assets/modtest/blockstates/scarlet_leaves.json
 85fa21edb550d392b5b7c594a863a84eee9f9910 assets/modtest/blockstates/scarlet_log.json
 190eac60f06ca8311dd330033161c84a077e1264 assets/modtest/blockstates/scarlet_planks.json
+218b1e7975850b24fb6a05961c2ab7303b115a6c assets/modtest/blockstates/scarlet_sapling.json
 9c418c4525163b2936b570bbd01ffcdee997b9a3 assets/modtest/blockstates/yellow.json
 2fa40ae60aaac19e8f78abf6c274ad4822b39f10 assets/modtest/models/block/aqua.json
 0521d47b6b14dd54a9a1add60f403831c0f1a5cc assets/modtest/models/block/blue.json
@@ -88,6 +89,7 @@ e2208fb9d9ba79d759a3985e02d0f5c7e09c2444 assets/modtest/models/block/potted_yell
 5eed742b3efa621c7fe1e6a3c20bda6a9408621c assets/modtest/models/block/scarlet_leaves.json
 cf336d9d96419d6f3c950fbaef86796ba796750d assets/modtest/models/block/scarlet_log.json
 06c833c35df647e52477992026aa442a7f3d50c6 assets/modtest/models/block/scarlet_planks.json
+40aa46879a8eaf506dd4e81dd420609acc0050c6 assets/modtest/models/block/scarlet_sapling.json
 704cd680c269495226621a1d9091009057de0221 assets/modtest/models/block/yellow.json
 e5755e495ed348918c07d9896f0d924a3367dcf0 assets/modtest/models/item/aqua.json
 45d0f8d2b99e947f2a316998c32812316b9317bd assets/modtest/models/item/blue.json
