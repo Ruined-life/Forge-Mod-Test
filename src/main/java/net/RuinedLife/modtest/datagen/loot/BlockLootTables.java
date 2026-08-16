@@ -45,9 +45,10 @@ public class BlockLootTables extends BlockLootSubProvider {
         //this.dropSelf(ModBlocks.STRIPPED_SCARLET_LOG.get());
         //this.dropSelf(ModBlocks.STRIPPED_SCARLET_WOOD.get());
         this.dropSelf(BlockRegistry.SCARLET_PLANKS.get());
+        this.dropSelf(BlockRegistry.SCARLET_SAPLING.get());
 
         this.add(BlockRegistry.SCARLET_LEAVES.get(), block ->
-                createLeavesDrops(block, BlockRegistry.NEW_ZEALAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); //TODO: Change to sapling
+                createLeavesDrops(block, BlockRegistry.SCARLET_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         //STAIRS, FENCES, FENCE GATES, SLABS, DOORS, TRAP DOORS
         this.dropSelf(BlockRegistry.DARKNESS_STAIRS.get());

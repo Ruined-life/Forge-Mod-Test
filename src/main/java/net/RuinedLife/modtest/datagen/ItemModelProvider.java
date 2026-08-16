@@ -92,6 +92,9 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
         simpleBlockItemBlockTexture(BlockRegistry.BLUE);
         simpleBlockItemBlockTexture(BlockRegistry.PINK);
 
+        //WOOD
+        saplingItem(BlockRegistry.SCARLET_SAPLING);
+
         withExistingParent(ItemsRegistry.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
     }
@@ -102,6 +105,12 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(modtest.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(modtest.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {

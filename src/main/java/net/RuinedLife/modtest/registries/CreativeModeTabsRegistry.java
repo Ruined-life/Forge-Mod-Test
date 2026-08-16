@@ -113,10 +113,9 @@ public class CreativeModeTabsRegistry {
                         //pOutput.accept(ModBlocks.SCARLET_WOOD.get());
                         //pOutput.accept(ModBlocks.STRIPPED_SCARLET_LOG.get());
                         //pOutput.accept(ModBlocks.STRIPPED_SCARLET_WOOD.get());
-
-
                         pOutput.accept(BlockRegistry.SCARLET_PLANKS.get());
                         pOutput.accept(BlockRegistry.SCARLET_LEAVES.get());
+                        pOutput.accept(BlockRegistry.SCARLET_SAPLING.get());
 
                         //BEDS
                         pOutput.accept(Items.PINK_BED);

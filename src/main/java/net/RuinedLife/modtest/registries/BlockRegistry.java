@@ -5,6 +5,7 @@ import net.RuinedLife.modtest.block.custom.GemPolishingStationBlock;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
 import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
+import net.RuinedLife.modtest.worldgen.tree.ScarletTreeGrower;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -92,6 +93,7 @@ public class BlockRegistry {
 
     public static final RegistryObject<Block> SCARLET_PLANKS = registerBlock("scarlet_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
     public static final RegistryObject<Block> SCARLET_LEAVES = registerBlock("scarlet_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
+    public static final RegistryObject<Block> SCARLET_SAPLING = registerBlock("scarlet_sapling", () -> new SaplingBlock(new ScarletTreeGrower(), BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
 
     //BLOCK ENTITIES
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station", () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));

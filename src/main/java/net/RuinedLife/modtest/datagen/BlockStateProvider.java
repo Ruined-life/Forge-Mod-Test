@@ -82,6 +82,7 @@ public class BlockStateProvider extends net.minecraftforge.client.model.generato
         multiLayerLogBlock((RotatedPillarBlock) BlockRegistry.SCARLET_LOG.get(), modLoc("block/scarlet_log_inner"), modLoc("block/scarlet_log_inner_top"), modLoc("block/scarlet_log_outer"), modLoc("block/scarlet_log_outer_top"));
         blockWithItem(BlockRegistry.SCARLET_PLANKS);
         multiLayerLeavesBlock(BlockRegistry.SCARLET_LEAVES, modLoc("block/scarlet_leaves_inner"), modLoc("block/scarlet_leaves_outer"));
+        saplingBlock(BlockRegistry.SCARLET_SAPLING);
 
         //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_LOG.get()), blockTexture(ModBlocks.STRIPPED_SCARLET_LOG.get()),
                 //new ResourceLocation(modtest.MOD_ID, "block/new_zealand_block"));
@@ -116,6 +117,11 @@ public class BlockStateProvider extends net.minecraftforge.client.model.generato
                 .renderType("cutout");
 
         simpleBlockWithItem(block.get(), model);
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
