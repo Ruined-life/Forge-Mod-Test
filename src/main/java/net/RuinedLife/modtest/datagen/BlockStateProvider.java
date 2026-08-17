@@ -84,6 +84,8 @@ public class BlockStateProvider extends net.minecraftforge.client.model.generato
         multiLayerLeavesBlock(BlockRegistry.SCARLET_LEAVES, modLoc("block/scarlet_leaves_inner"), modLoc("block/scarlet_leaves_outer"));
         saplingBlock(BlockRegistry.SCARLET_SAPLING);
 
+        blockWithItem(BlockRegistry.PORTAL);
+
         //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_LOG.get()), blockTexture(ModBlocks.STRIPPED_SCARLET_LOG.get()),
                 //new ResourceLocation(modtest.MOD_ID, "block/new_zealand_block"));
         //axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SCARLET_WOOD.get()),

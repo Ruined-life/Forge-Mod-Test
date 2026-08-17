@@ -26,6 +26,10 @@ public class SoundsRegistry {
     //MUSIC
     public static final RegistryObject<SoundEvent> TEMPORARY = registerSoundEvents("temporary");
     public static final RegistryObject<SoundEvent> BLACK_KNIFE = registerSoundEvents("black_knife");
+    public static final RegistryObject<SoundEvent> TEST_BIOME_MUSIC = SOUND_EVENTS.register(
+            "test_biome_music",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "test_biome_music"))
+    );
 
     //MOB SOUNDS
     public static final RegistryObject<SoundEvent> AQUA_AMBIENT = SOUND_EVENTS.register("aqua_ambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modtest.MOD_ID, "aqua_ambient")));

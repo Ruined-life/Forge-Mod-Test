@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-16T20:40:05.798468682	Block States: modtest
+// 1.20.1	2026-08-17T20:59:26.578967932	Block States: modtest
 779d5cc8bcf54c711185c945b1c1ac7e38526374 assets/modtest/blockstates/aqua.json
 1cc8c8def11bfe0fd3badb79712fdeee41ef993b assets/modtest/blockstates/blue.json
 96acdd379ca5e4abb47e2114cd87dd457114b92d assets/modtest/blockstates/darkness_block.json
@@ -20,6 +20,7 @@ ba70d647b5f657b376870511d8bf5657700ef37e assets/modtest/blockstates/kiwi_crop.js
 33fe2aa256807c73d7fcf339c9b74d21f03fc819 assets/modtest/blockstates/orange.json
 b521aad73882a07ea3ff855aa18f67009374d083 assets/modtest/blockstates/pink.json
 9bbba6ce23965bf5328b544f50ce90ea822039ca assets/modtest/blockstates/pink_block.json
+b6d6b8c160b124adf65fe93f0c11de1aa1e2a9c9 assets/modtest/blockstates/portal.json
 211c4648b56d37394680b0ec4c92c9c6686c1f87 assets/modtest/blockstates/potted_aqua.json
 bcf64538dace86ce36f63285b094dcbbea1e7577 assets/modtest/blockstates/potted_blue.json
 9e0e9eb1a32f238f47c162ff193e518c8526de4c assets/modtest/blockstates/potted_gold.json
@@ -77,6 +78,7 @@ e29395ef58ca230877d143e4ccca1b80221312e8 assets/modtest/models/block/new_zealand
 76a4e9c6ec93ffa4854b906752e8cee9ac7155d2 assets/modtest/models/block/orange.json
 78a59741abbf7407f9c9d7088286bd306ff07e32 assets/modtest/models/block/pink.json
 f00dffad08c4c7e6ca4411ef4803ed5d4b5dce82 assets/modtest/models/block/pink_block.json
+63abf08c85fe24b8cbf421d488fe55fcdb45ffac assets/modtest/models/block/portal.json
 aa156f6ecfac2ed1c5dba14374004fb38ba6c0a5 assets/modtest/models/block/potted_aqua.json
 b61123a834db9d72af9d36b9ac52b61a86071f2a assets/modtest/models/block/potted_blue.json
 d0a031caa83494d42acf1b19bba14474cf12ce5b assets/modtest/models/block/potted_gold.json
@@ -102,6 +104,7 @@ cf71a985cb085bc57027b300854791c81054297a assets/modtest/models/item/green.json
 264d4bdf6afe103f2070559e357ed9559e324b52 assets/modtest/models/item/orange.json
 d8ce13459763532baa103bf8da2939173cf43ee3 assets/modtest/models/item/pink.json
 89907447dee10744313cf59d20d9459d9e8e7c57 assets/modtest/models/item/pink_block.json
+6fe1eab28d0e07985c3db15b60f471cf669b5092 assets/modtest/models/item/portal.json
 017f6ba2acdea44164fc8bd3d00ebe797456960f assets/modtest/models/item/potted_aqua.json
 882d5c1aac9037393becc558a634f6242072a4cc assets/modtest/models/item/potted_blue.json
 f76ef4333c5245526bf6b24f938e6ebf61e9c098 assets/modtest/models/item/potted_gold.json

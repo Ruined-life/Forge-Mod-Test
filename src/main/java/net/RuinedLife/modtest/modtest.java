@@ -14,6 +14,8 @@ import net.RuinedLife.modtest.registries.SoundsRegistry;
 import net.RuinedLife.modtest.registries.VillagersRegistry;
 import net.RuinedLife.modtest.screen.GemPolishingStationScreen;
 import net.RuinedLife.modtest.screen.ModMenuTypes;
+import net.RuinedLife.modtest.worldgen.biome.TerraBlender;
+import net.RuinedLife.modtest.worldgen.biome.surface.ModSurfaceRules;
 import net.RuinedLife.modtest.worldgen.tree.FoliagePlacers;
 import net.RuinedLife.modtest.worldgen.tree.TrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -33,6 +35,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(net.RuinedLife.modtest.modtest.MOD_ID)
@@ -54,6 +57,7 @@ public class modtest {
         ModMenuTypes.register(modEventBus);
         TrunkPlacerTypes.register(modEventBus);
         FoliagePlacers.register(modEventBus);
+        TerraBlender.registerBiomes();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -70,6 +74,8 @@ public class modtest {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.ORANGE.getId(), BlockRegistry.POTTED_ORANGE);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.BLUE.getId(), BlockRegistry.POTTED_BLUE);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockRegistry.PINK.getId(), BlockRegistry.POTTED_PINK);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
 
     }

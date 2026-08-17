@@ -3,6 +3,7 @@ package net.RuinedLife.modtest.registries;
 import net.RuinedLife.modtest.block.custom.FlammableRotatedPillarBlock;
 import net.RuinedLife.modtest.block.custom.GemPolishingStationBlock;
 import net.RuinedLife.modtest.block.custom.KiwiFruitCropBlock;
+import net.RuinedLife.modtest.block.custom.PortalBlock;
 import net.RuinedLife.modtest.item.custom.DustBlock;
 import net.RuinedLife.modtest.modtest;
 import net.RuinedLife.modtest.worldgen.tree.ScarletTreeGrower;
@@ -98,6 +99,8 @@ public class BlockRegistry {
     //BLOCK ENTITIES
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station", () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
+    //DIMENSION BLOCKS
+    public static final RegistryObject<Block> PORTAL = registerBlock("portal", () -> new PortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion().noCollission()));
 
     /*---------------------------------------------------------------------------------------------------------------------------*/
     /*METHODS*/

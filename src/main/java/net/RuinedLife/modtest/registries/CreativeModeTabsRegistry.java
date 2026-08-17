@@ -141,6 +141,9 @@ public class CreativeModeTabsRegistry {
                         pOutput.accept(ItemsRegistry.AQUA_SPAWN_EGG.get());
                         pOutput.accept(ItemsRegistry.GOKU_SPAWN_EGG.get());
 
+                        //DIMENSION BLOCKS
+                        pOutput.accept(BlockRegistry.PORTAL.get());
+
                     })
                     .build());
 

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "modtest:dont_forget",
+      "weight": 100
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 10,
+    "salt": 11111111
+  }
+}
